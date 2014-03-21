@@ -31,9 +31,12 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="ejj-sn-Y5P"/>
                     </constraints>
-                    <state key="normal" title="Alert!">
+                    <state key="normal" title="Hello World">
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="didPressAlertButton:" destination="-1" eventType="touchUpInside" id="aep-mz-xR3"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

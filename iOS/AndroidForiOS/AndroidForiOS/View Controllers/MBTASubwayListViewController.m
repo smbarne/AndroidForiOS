@@ -21,8 +21,11 @@
 
 static NSString* const kMBTASubwayListViewControllerTitle = @"Subway Lines";
 static NSString* const kMBTASubwayLineCell = @"kMBTASubwayLineCell";
+NSString* const kMBTAApplicationDescription = @"This application demonstrates the correlation between iOS and Android development using Subway data provided by the MBTA.";
 
-@interface MBTASubwayListViewController () < UITableViewDataSource, UITableViewDelegate >
+@interface MBTASubwayListViewController () < UITableViewDataSource,
+                                             UITableViewDelegate,
+                                             UIAlertViewDelegate >
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *alertButton;
@@ -79,5 +82,13 @@ static NSString* const kMBTASubwayLineCell = @"kMBTASubwayLineCell";
     // TODO: load data and go to next VC
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
+
+#pragma mark - Actions
+
+- (IBAction)didPressAlertButton:(id)sender
+{
+    [[[UIAlertView alloc] initWithTitle:@"Hello World" message:kMBTAApplicationDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
 
 @end

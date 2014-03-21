@@ -1,19 +1,17 @@
-package com.example.androidforios.app;
+package com.example.androidforios.app.activities;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.example.androidforios.app.SubwayListFragment;
-import com.example.androidforios.app.SubwayListFragment.OnFragmentInteractionListener;
+import com.example.androidforios.app.R;
+import com.example.androidforios.app.data.model.TripList;
+import com.example.androidforios.app.fragments.SubwayListFragment;
+import com.example.androidforios.app.fragments.SubwayListFragment.OnFragmentInteractionListener;
 
-public class MainActivity extends Activity implements OnFragmentInteractionListener {
+public class MainActivity extends FragmentActivity implements OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class MainActivity extends Activity implements OnFragmentInteractionListe
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             Fragment subwayListFragment = SubwayListFragment.newInstance();
-            getFragmentManager().beginTransaction()
+            getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, subwayListFragment)
                     .commit();
         }
@@ -46,8 +44,11 @@ public class MainActivity extends Activity implements OnFragmentInteractionListe
         return super.onOptionsItemSelected(item);
     }
 
-    public void onFragmentInteraction(Uri uri)
+    public void onLineTypeSelected(TripList.LineType lineType)
     {
-
+        // TODO:
+        // Create new activity
+        // Place linetype in extras
+        // Launch with intent
     }
 }

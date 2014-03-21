@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+OBJC_EXTERN NSString* const kMBTAApplicationDescription;
+
 @interface MBTASubwayListViewController : UIViewController
 
 @end

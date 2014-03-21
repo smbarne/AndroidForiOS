@@ -6,4 +6,9 @@
     <color name="Button.Background">#ec594d</color>
     <color name="Button.Selected">#ffec252a</color>
 
+    <!-- From Android Design Guidelines: http://developer.android.com/design/style/color.html -->
+    <color name="LineType.Red">#FF4444</color>
+    <color name="LineType.Orange">#FFBB33</color>
+    <color name="LineType.Blue">#33B5E5</color>
+
 </resources>
