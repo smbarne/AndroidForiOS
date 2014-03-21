@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="RZRed">#ec594d</color>
+
+    <color name="Button.Text">#ffffff</color>
+    <color name="Button.Background">#ec594d</color>
+    <color name="Button.Selected">#ffec252a</color>
+
+</resources>
