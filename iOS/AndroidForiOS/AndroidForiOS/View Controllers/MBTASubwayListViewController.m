@@ -1,22 +1,22 @@
 //
-//  SBViewController.m
+//  MBTAViewController.m
 //  AndroidForiOS
 //
 //  Created by Stephen Barnes on 3/21/14.
 //  Copyright (c) 2014 Stephen Barnes. All rights reserved.
 //
 
-#import "SBSubwayListViewController.h"
+#import "MBTASubwayListViewController.h"
 
 static NSString* const kSBSubwayListViewControllerTitle = @"Subway Lines";
 
-@interface SBSubwayListViewController () < UITableViewDataSource, UITableViewDelegate >
+@interface MBTASubwayListViewController () < UITableViewDataSource, UITableViewDelegate >
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation SBSubwayListViewController
+@implementation MBTASubwayListViewController
 
 - (void)viewDidLoad
 {

@@ -1,5 +1,5 @@
 //
-//  SBAppDelegate.h
+//  MBTAViewController.h
 //  AndroidForiOS
 //
 //  Created by Stephen Barnes on 3/21/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SBAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface MBTASubwayListViewController : UIViewController
 
 @end

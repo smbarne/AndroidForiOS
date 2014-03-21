@@ -1,25 +1,25 @@
 //
-//  SBAppDelegate.m
+//  MBTAAppDelegate.m
 //  AndroidForiOS
 //
 //  Created by Stephen Barnes on 3/21/14.
 //  Copyright (c) 2014 Stephen Barnes. All rights reserved.
 //
 
-#import "SBAppDelegate.h"
-#import "SBSubwayListViewController.h"
+#import "MBTAAppDelegate.h"
+#import "MBTASubwayListViewController.h"
 
-@interface SBAppDelegate ()
+@interface MBTAAppDelegate ()
 
 @property (strong, nonatomic) UINavigationController *rootNavigationController;
 
 @end
 
-@implementation SBAppDelegate
+@implementation MBTAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    SBSubwayListViewController *initalVC = [[SBSubwayListViewController alloc] init];
+    MBTASubwayListViewController *initalVC = [[MBTASubwayListViewController alloc] init];
     self.rootNavigationController = [[UINavigationController alloc] initWithRootViewController:initalVC];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

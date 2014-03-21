@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBSubwayListViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MBTASubwayListViewController">
             <connections>
                 <outlet property="tableView" destination="lTW-NQ-Ev9" id="EhF-ei-Nz8"/>
                 <outlet property="view" destination="5cm-Eg-1dP" id="ZQR-nF-z1J"/>
