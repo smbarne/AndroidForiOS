@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+@class MBTATrip;
+
+typedef NS_ENUM(NSInteger, MBTALineType)
+{
+    MBTALineTypeRed = 0,
+    MBTALineTypeOrange,
+    MBTALineTypeBlue,
+    MBTALineTypeCount
+};
+
 @interface MBTATripList : NSObject
+
+@property (strong, nonatomic) NSDate *currentTime;
+@property (assign, nonatomic) MBTALineType subwayLine;
+@property (strong, nonatomic) NSArray *trips;
+
+
 
 @end

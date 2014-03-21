@@ -10,4 +10,13 @@
 
 @interface MBTATrip : NSObject
 
+@property (strong, nonatomic) NSString *tripId;
+@property (strong, nonatomic) NSString *destination;
+@property (strong, nonatomic) NSDate *positionTimeStamp;
+@property (strong, nonatomic) NSString *trainName;
+@property (assign, nonatomic) CGFloat positionLat;
+@property (assign, nonatomic) CGFloat positionLong;
+@property (assign, nonatomic) NSInteger positionHeading;
+@property (strong, nonatomic) NSArray *predictions;
+
 @end

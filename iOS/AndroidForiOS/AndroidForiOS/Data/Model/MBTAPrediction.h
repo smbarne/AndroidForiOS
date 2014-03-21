@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface MBTAPrediction : NSObject
+
+@property (strong, nonatomic) NSString *stopId;
+@property (strong, nonatomic) NSString *stopName;
+@property (assign, nonatomic) NSInteger *stopSeconds;
 
 @end

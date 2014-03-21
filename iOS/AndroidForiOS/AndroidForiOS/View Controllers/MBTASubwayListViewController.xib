@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MBTASubwayListViewController">
             <connections>
+                <outlet property="alertButton" destination="pRD-au-Xnw" id="DrO-eV-cHA"/>
                 <outlet property="tableView" destination="lTW-NQ-Ev9" id="EhF-ei-Nz8"/>
                 <outlet property="view" destination="5cm-Eg-1dP" id="ZQR-nF-z1J"/>
             </connections>
@@ -24,14 +25,14 @@
                         <outlet property="delegate" destination="-1" id="ykC-ws-rL4"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-au-Xnw">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-au-Xnw">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="ejj-sn-Y5P"/>
                     </constraints>
                     <state key="normal" title="Alert!">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
             </subviews>

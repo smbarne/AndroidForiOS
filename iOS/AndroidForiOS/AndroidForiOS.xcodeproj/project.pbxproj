@@ -31,6 +31,9 @@
 		83A4C15518DCA9A700DD378B /* MBTATrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15418DCA9A700DD378B /* MBTATrip.m */; };
 		83A4C15818DCA9C500DD378B /* MBTAPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15718DCA9C500DD378B /* MBTAPrediction.m */; };
 		83A4C15B18DCA9F700DD378B /* MBTADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15A18DCA9F700DD378B /* MBTADataManager.m */; };
+		83A4C15F18DCB37600DD378B /* NSString+lineType.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15E18DCB37600DD378B /* NSString+lineType.m */; };
+		83A4C16218DCB38C00DD378B /* UIColor+MBTAColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */; };
+		83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,12 @@
 		83A4C15718DCA9C500DD378B /* MBTAPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTAPrediction.m; path = Data/Model/MBTAPrediction.m; sourceTree = "<group>"; };
 		83A4C15918DCA9F700DD378B /* MBTADataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTADataManager.h; path = Data/Managers/MBTADataManager.h; sourceTree = "<group>"; };
 		83A4C15A18DCA9F700DD378B /* MBTADataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTADataManager.m; path = Data/Managers/MBTADataManager.m; sourceTree = "<group>"; };
+		83A4C15D18DCB37600DD378B /* NSString+lineType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+lineType.h"; path = "Utilities/NSString+lineType.h"; sourceTree = "<group>"; };
+		83A4C15E18DCB37600DD378B /* NSString+lineType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+lineType.m"; path = "Utilities/NSString+lineType.m"; sourceTree = "<group>"; };
+		83A4C16018DCB38C00DD378B /* UIColor+MBTAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MBTAColors.h"; path = "Utilities/UIColor+MBTAColors.h"; sourceTree = "<group>"; };
+		83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MBTAColors.m"; path = "Utilities/UIColor+MBTAColors.m"; sourceTree = "<group>"; };
+		83A4C16318DCB5FA00DD378B /* UIImage+QuickImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+QuickImage.h"; path = "Utilities/UIImage+QuickImage.h"; sourceTree = "<group>"; };
+		83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+QuickImage.m"; path = "Utilities/UIImage+QuickImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,7 @@
 				83A4C12B18DC89C100DD378B /* Application */,
 				83A4C12C18DC89E300DD378B /* View Controllers */,
 				83A4C14618DCA79D00DD378B /* Views */,
+				83A4C15C18DCB33C00DD378B /* Utilities */,
 				83A4C12D18DC89EB00DD378B /* Resources */,
 				83A4C0FD18DC891E00DD378B /* Supporting Files */,
 			);
@@ -266,6 +276,19 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		83A4C15C18DCB33C00DD378B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83A4C16318DCB5FA00DD378B /* UIImage+QuickImage.h */,
+				83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */,
+				83A4C15D18DCB37600DD378B /* NSString+lineType.h */,
+				83A4C15E18DCB37600DD378B /* NSString+lineType.m */,
+				83A4C16018DCB38C00DD378B /* UIColor+MBTAColors.h */,
+				83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -373,6 +396,9 @@
 				83A4C15518DCA9A700DD378B /* MBTATrip.m in Sources */,
 				83A4C14B18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.m in Sources */,
 				83A4C13618DC8AE700DD378B /* MBTASubwayListViewController.m in Sources */,
+				83A4C16218DCB38C00DD378B /* UIColor+MBTAColors.m in Sources */,
+				83A4C15F18DCB37600DD378B /* NSString+lineType.m in Sources */,
+				83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */,
 				83A4C14518DCA73300DD378B /* MBTASubwayTripTableViewController.m in Sources */,
 				83A4C13318DC8AD800DD378B /* MBTAAppDelegate.m in Sources */,
 				83A4C15818DCA9C500DD378B /* MBTAPrediction.m in Sources */,
