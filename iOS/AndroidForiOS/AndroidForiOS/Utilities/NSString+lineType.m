@@ -37,4 +37,20 @@
     return [lineTypeString stringByAppendingString:@".json"];
 }
 
++ (MBTALineType)lineTypeForString:(NSString *)stringValue
+{
+    MBTALineType lineType = MBTALineTypeRed;
+    if ([stringValue isEqualToString:@"Red"]) {
+        lineType = MBTALineTypeRed;
+    }
+    else if ([stringValue isEqualToString:@"Blue"]) {
+        lineType = MBTALineTypeBlue;
+    }
+    else if ([stringValue isEqualToString:@"Orange"]) {
+        lineType = MBTALineTypeOrange;
+    }
+    
+    return lineType;
+}
+
 @end

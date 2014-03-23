@@ -13,5 +13,6 @@
 
 + (NSString *)stringForLineType:(MBTALineType)lineType;
 + (NSString *)fileNameForLineType:(MBTALineType)lineType;
++ (MBTALineType)lineTypeForString:(NSString *)stringValue;
 
 @end

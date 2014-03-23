@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, MBTALineType)
 @property (assign, nonatomic) MBTALineType subwayLine;
 @property (strong, nonatomic) NSArray *trips;
 
-
+- (instancetype)initWithData:(NSDictionary *)data;
+- (MBTATripList *)importWithData:(NSDictionary *)data;
 
 @end

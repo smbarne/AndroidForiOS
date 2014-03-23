@@ -8,6 +8,9 @@
 
 #import "MBTASubwayListViewController.h"
 
+// View Controllers
+#import "MBTATripListTableViewController.h"
+
 // Managers
 #import "MBTADataManager.h"
 
@@ -48,7 +51,7 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
     }
     self.data = subwayLines;
     
-    [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor rzRed]] forState:UIControlStateNormal];
+    [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forState:UIControlStateNormal];
     [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor rzRedPressed]] forState:UIControlStateHighlighted];
 }
 
@@ -79,16 +82,18 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: load data and go to next VC
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    MBTALineType selectedLineType = [(NSNumber *)[self.data objectAtIndex:indexPath.row] integerValue];
+    MBTATripListTableViewController *tripListVC = [[MBTATripListTableViewController alloc] initWithLineType:selectedLineType];
+    [self.navigationController pushViewController:tripListVC animated:YES];
 }
 
 #pragma mark - Actions
 
 - (IBAction)didPressAlertButton:(id)sender
 {
-    [[[UIAlertView alloc] initWithTitle:@"Hello World" message:kMBTAApplicationDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Hello World" message:kMBTAApplicationDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
-
 
 @end

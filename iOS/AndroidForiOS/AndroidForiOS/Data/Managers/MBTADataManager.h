@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBTATripList.h"
 
-@class MBTATripList;
-
-typedef void (^MBTAImportCompletionBlock)(MBTATripList*, BOOL succeeded, NSError* error);
+typedef void (^MBTAImportCompletionBlock)(MBTATripList *tripList, BOOL succeeded, NSError* error);
 
 @interface MBTADataManager : NSObject
 
 #pragma mark - Shared Instance
-+ (MBTADataManager*)shared;
++ (MBTADataManager *)shared;
+
+#pragma mark - Date Formatters
++ (NSDateFormatter *)dataDateFormatter;
 
 #pragma mark - Data Import
-- (void)importDataForKey:(NSString *)key fromFileNamed:(NSString *)fileNamed withCompletion:(MBTAImportCompletionBlock)completion;
+- (void)importDataForKey:(MBTALineType)key withCompletion:(MBTAImportCompletionBlock)completion;
 
 @end

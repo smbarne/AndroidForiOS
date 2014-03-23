@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8330B59A18DF5D50005E56AF /* MBTAPredictionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330B59818DF5D50005E56AF /* MBTAPredictionCell.m */; };
+		8330B5A218DF654D005E56AF /* MBTATripHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330B5A118DF654D005E56AF /* MBTATripHeaderView.m */; };
+		8330B5A418DF6571005E56AF /* MBTATripHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330B5A318DF6571005E56AF /* MBTATripHeaderView.xib */; };
 		83A4C0F718DC891E00DD378B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A4C0F618DC891E00DD378B /* Foundation.framework */; };
 		83A4C0F918DC891E00DD378B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A4C0F818DC891E00DD378B /* CoreGraphics.framework */; };
 		83A4C0FB18DC891E00DD378B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A4C0FA18DC891E00DD378B /* UIKit.framework */; };
@@ -24,9 +27,8 @@
 		83A4C14018DCA6DD00DD378B /* Blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13D18DCA6DD00DD378B /* Blue.json */; };
 		83A4C14118DCA6DD00DD378B /* Orange.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13E18DCA6DD00DD378B /* Orange.json */; };
 		83A4C14218DCA6DD00DD378B /* Red.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13F18DCA6DD00DD378B /* Red.json */; };
-		83A4C14518DCA73300DD378B /* MBTASubwayTripTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C14418DCA73300DD378B /* MBTASubwayTripTableViewController.m */; };
-		83A4C14B18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C14918DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.m */; };
-		83A4C14C18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C14A18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.xib */; };
+		83A4C14B18DCA7E900DD378B /* MBTASubwayTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C14918DCA7E900DD378B /* MBTASubwayTripCell.m */; };
+		83A4C14C18DCA7E900DD378B /* MBTASubwayTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C14A18DCA7E900DD378B /* MBTASubwayTripCell.xib */; };
 		83A4C15218DCA99600DD378B /* MBTATripList.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15118DCA99600DD378B /* MBTATripList.m */; };
 		83A4C15518DCA9A700DD378B /* MBTATrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15418DCA9A700DD378B /* MBTATrip.m */; };
 		83A4C15818DCA9C500DD378B /* MBTAPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15718DCA9C500DD378B /* MBTAPrediction.m */; };
@@ -34,6 +36,8 @@
 		83A4C15F18DCB37600DD378B /* NSString+lineType.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15E18DCB37600DD378B /* NSString+lineType.m */; };
 		83A4C16218DCB38C00DD378B /* UIColor+MBTAColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */; };
 		83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */; };
+		83A4C16818DF571200DD378B /* MBTASubwayTripTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */; };
+		83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8330B59718DF5D50005E56AF /* MBTAPredictionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTAPredictionCell.h; path = Views/Cells/MBTAPredictionCell.h; sourceTree = "<group>"; };
+		8330B59818DF5D50005E56AF /* MBTAPredictionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTAPredictionCell.m; path = Views/Cells/MBTAPredictionCell.m; sourceTree = "<group>"; };
+		8330B5A018DF654D005E56AF /* MBTATripHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATripHeaderView.h; path = Views/HeaderViews/MBTATripHeaderView.h; sourceTree = "<group>"; };
+		8330B5A118DF654D005E56AF /* MBTATripHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTATripHeaderView.m; path = Views/HeaderViews/MBTATripHeaderView.m; sourceTree = "<group>"; };
+		8330B5A318DF6571005E56AF /* MBTATripHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MBTATripHeaderView.xib; path = Views/HeaderViews/MBTATripHeaderView.xib; sourceTree = "<group>"; };
 		83A4C0F318DC891E00DD378B /* AndroidForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndroidForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A4C0F618DC891E00DD378B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83A4C0F818DC891E00DD378B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,11 +78,9 @@
 		83A4C13D18DCA6DD00DD378B /* Blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Blue.json; path = ../../../Data/v2.0/Blue.json; sourceTree = "<group>"; };
 		83A4C13E18DCA6DD00DD378B /* Orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Orange.json; path = ../../../Data/v2.0/Orange.json; sourceTree = "<group>"; };
 		83A4C13F18DCA6DD00DD378B /* Red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Red.json; path = ../../../Data/v2.0/Red.json; sourceTree = "<group>"; };
-		83A4C14318DCA73300DD378B /* MBTASubwayTripTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTASubwayTripTableViewController.h; path = "View Controllers/MBTASubwayTripTableViewController.h"; sourceTree = "<group>"; };
-		83A4C14418DCA73300DD378B /* MBTASubwayTripTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripTableViewController.m; path = "View Controllers/MBTASubwayTripTableViewController.m"; sourceTree = "<group>"; };
-		83A4C14818DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTASubwayTripCellTableViewCell.h; path = Views/Cells/MBTASubwayTripCellTableViewCell.h; sourceTree = "<group>"; };
-		83A4C14918DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripCellTableViewCell.m; path = Views/Cells/MBTASubwayTripCellTableViewCell.m; sourceTree = "<group>"; };
-		83A4C14A18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MBTASubwayTripCellTableViewCell.xib; path = Views/Cells/MBTASubwayTripCellTableViewCell.xib; sourceTree = "<group>"; };
+		83A4C14818DCA7E900DD378B /* MBTASubwayTripCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTASubwayTripCell.h; path = Views/Cells/MBTASubwayTripCell.h; sourceTree = "<group>"; };
+		83A4C14918DCA7E900DD378B /* MBTASubwayTripCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripCell.m; path = Views/Cells/MBTASubwayTripCell.m; sourceTree = "<group>"; };
+		83A4C14A18DCA7E900DD378B /* MBTASubwayTripCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MBTASubwayTripCell.xib; path = Views/Cells/MBTASubwayTripCell.xib; sourceTree = "<group>"; };
 		83A4C15018DCA99600DD378B /* MBTATripList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATripList.h; path = Data/Model/MBTATripList.h; sourceTree = "<group>"; };
 		83A4C15118DCA99600DD378B /* MBTATripList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTATripList.m; path = Data/Model/MBTATripList.m; sourceTree = "<group>"; };
 		83A4C15318DCA9A700DD378B /* MBTATrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATrip.h; path = Data/Model/MBTATrip.h; sourceTree = "<group>"; };
@@ -88,6 +95,10 @@
 		83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MBTAColors.m"; path = "Utilities/UIColor+MBTAColors.m"; sourceTree = "<group>"; };
 		83A4C16318DCB5FA00DD378B /* UIImage+QuickImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+QuickImage.h"; path = "Utilities/UIImage+QuickImage.h"; sourceTree = "<group>"; };
 		83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+QuickImage.m"; path = "Utilities/UIImage+QuickImage.m"; sourceTree = "<group>"; };
+		83A4C16618DF571200DD378B /* MBTASubwayTripTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTASubwayTripTableTableViewController.h; path = "View Controllers/MBTASubwayTripTableTableViewController.h"; sourceTree = "<group>"; };
+		83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripTableTableViewController.m; path = "View Controllers/MBTASubwayTripTableTableViewController.m"; sourceTree = "<group>"; };
+		83A4C16918DF57DD00DD378B /* MBTATripListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATripListTableViewController.h; path = "View Controllers/MBTATripListTableViewController.h"; sourceTree = "<group>"; };
+		83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTATripListTableViewController.m; path = "View Controllers/MBTATripListTableViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +125,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8330B59C18DF5E29005E56AF /* Trip List */ = {
+			isa = PBXGroup;
+			children = (
+				83A4C16918DF57DD00DD378B /* MBTATripListTableViewController.h */,
+				83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */,
+			);
+			name = "Trip List";
+			sourceTree = "<group>";
+		};
+		8330B59D18DF5E2F005E56AF /* Trip Detail */ = {
+			isa = PBXGroup;
+			children = (
+				83A4C16618DF571200DD378B /* MBTASubwayTripTableTableViewController.h */,
+				83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */,
+			);
+			name = "Trip Detail";
+			sourceTree = "<group>";
+		};
+		8330B59E18DF5E36005E56AF /* Subway Selection */ = {
+			isa = PBXGroup;
+			children = (
+				83A4C13418DC8AE700DD378B /* MBTASubwayListViewController.h */,
+				83A4C13518DC8AE700DD378B /* MBTASubwayListViewController.m */,
+				83A4C13A18DC8B2900DD378B /* MBTASubwayListViewController.xib */,
+			);
+			name = "Subway Selection";
+			sourceTree = "<group>";
+		};
+		8330B59F18DF6523005E56AF /* Header Views */ = {
+			isa = PBXGroup;
+			children = (
+				8330B5A018DF654D005E56AF /* MBTATripHeaderView.h */,
+				8330B5A118DF654D005E56AF /* MBTATripHeaderView.m */,
+				8330B5A318DF6571005E56AF /* MBTATripHeaderView.xib */,
+			);
+			name = "Header Views";
+			sourceTree = "<group>";
+		};
 		83A4C0EA18DC891E00DD378B = {
 			isa = PBXGroup;
 			children = (
@@ -199,11 +248,9 @@
 		83A4C12C18DC89E300DD378B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83A4C13418DC8AE700DD378B /* MBTASubwayListViewController.h */,
-				83A4C13518DC8AE700DD378B /* MBTASubwayListViewController.m */,
-				83A4C13A18DC8B2900DD378B /* MBTASubwayListViewController.xib */,
-				83A4C14318DCA73300DD378B /* MBTASubwayTripTableViewController.h */,
-				83A4C14418DCA73300DD378B /* MBTASubwayTripTableViewController.m */,
+				8330B59E18DF5E36005E56AF /* Subway Selection */,
+				8330B59D18DF5E2F005E56AF /* Trip Detail */,
+				8330B59C18DF5E29005E56AF /* Trip List */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -230,6 +277,7 @@
 		83A4C14618DCA79D00DD378B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8330B59F18DF6523005E56AF /* Header Views */,
 				83A4C14718DCA7B200DD378B /* Cells */,
 			);
 			name = Views;
@@ -238,9 +286,11 @@
 		83A4C14718DCA7B200DD378B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				83A4C14818DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.h */,
-				83A4C14918DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.m */,
-				83A4C14A18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.xib */,
+				83A4C14818DCA7E900DD378B /* MBTASubwayTripCell.h */,
+				83A4C14918DCA7E900DD378B /* MBTASubwayTripCell.m */,
+				83A4C14A18DCA7E900DD378B /* MBTASubwayTripCell.xib */,
+				8330B59718DF5D50005E56AF /* MBTAPredictionCell.h */,
+				8330B59818DF5D50005E56AF /* MBTAPredictionCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -370,9 +420,10 @@
 				83A4C14018DCA6DD00DD378B /* Blue.json in Resources */,
 				83A4C13B18DC8B2900DD378B /* MBTASubwayListViewController.xib in Resources */,
 				83A4C14218DCA6DD00DD378B /* Red.json in Resources */,
+				8330B5A418DF6571005E56AF /* MBTATripHeaderView.xib in Resources */,
 				83A4C13818DC8AEF00DD378B /* Images.xcassets in Resources */,
 				83A4C14118DCA6DD00DD378B /* Orange.json in Resources */,
-				83A4C14C18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.xib in Resources */,
+				83A4C14C18DCA7E900DD378B /* MBTASubwayTripCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,15 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A4C16818DF571200DD378B /* MBTASubwayTripTableTableViewController.m in Sources */,
 				83A4C13218DC8AD800DD378B /* main.m in Sources */,
 				83A4C15218DCA99600DD378B /* MBTATripList.m in Sources */,
 				83A4C15518DCA9A700DD378B /* MBTATrip.m in Sources */,
-				83A4C14B18DCA7E900DD378B /* MBTASubwayTripCellTableViewCell.m in Sources */,
+				83A4C14B18DCA7E900DD378B /* MBTASubwayTripCell.m in Sources */,
 				83A4C13618DC8AE700DD378B /* MBTASubwayListViewController.m in Sources */,
 				83A4C16218DCB38C00DD378B /* UIColor+MBTAColors.m in Sources */,
+				83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */,
+				8330B59A18DF5D50005E56AF /* MBTAPredictionCell.m in Sources */,
 				83A4C15F18DCB37600DD378B /* NSString+lineType.m in Sources */,
 				83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */,
-				83A4C14518DCA73300DD378B /* MBTASubwayTripTableViewController.m in Sources */,
+				8330B5A218DF654D005E56AF /* MBTATripHeaderView.m in Sources */,
 				83A4C13318DC8AD800DD378B /* MBTAAppDelegate.m in Sources */,
 				83A4C15818DCA9C500DD378B /* MBTAPrediction.m in Sources */,
 				83A4C15B18DCA9F700DD378B /* MBTADataManager.m in Sources */,
@@ -599,6 +653,7 @@
 				83A4C12718DC891E00DD378B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83A4C12818DC891E00DD378B /* Build configuration list for PBXNativeTarget "AndroidForiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +662,7 @@
 				83A4C12A18DC891E00DD378B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface MBTAPrediction : NSObject
 
 @property (strong, nonatomic) NSString *stopId;
 @property (strong, nonatomic) NSString *stopName;
-@property (assign, nonatomic) NSInteger *stopSeconds;
+@property (assign, nonatomic) NSInteger stopSeconds;
+
+- (instancetype)initWithData:(NSDictionary *)data;
+- (MBTAPrediction *)importWithData:(NSDictionary *)data;
 
 @end

@@ -19,4 +19,7 @@
 @property (assign, nonatomic) NSInteger positionHeading;
 @property (strong, nonatomic) NSArray *predictions;
 
+- (instancetype)initWithData:(NSDictionary *)data;
+- (MBTATrip *)importWithData:(NSDictionary *)data;
+
 @end
