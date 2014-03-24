@@ -1,5 +1,6 @@
 package com.example.androidforios.app.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -9,9 +10,9 @@ import android.view.MenuItem;
 import com.example.androidforios.app.R;
 import com.example.androidforios.app.data.model.TripList;
 import com.example.androidforios.app.fragments.SubwayListFragment;
-import com.example.androidforios.app.fragments.SubwayListFragment.OnFragmentInteractionListener;
+import com.example.androidforios.app.fragments.SubwayListFragment.SubwayLineFragmentInteractionListener;
 
-public class MainActivity extends FragmentActivity implements OnFragmentInteractionListener {
+public class MainActivity extends FragmentActivity implements SubwayLineFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class MainActivity extends FragmentActivity implements OnFragmentInteract
         if (savedInstanceState == null) {
             Fragment subwayListFragment = SubwayListFragment.newInstance();
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, subwayListFragment)
+                    .add(R.id.activity_main_container, subwayListFragment)
                     .commit();
         }
     }
@@ -38,7 +39,7 @@ public class MainActivity extends FragmentActivity implements OnFragmentInteract
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -46,9 +47,7 @@ public class MainActivity extends FragmentActivity implements OnFragmentInteract
 
     public void onLineTypeSelected(TripList.LineType lineType)
     {
-        // TODO:
-        // Create new activity
-        // Place linetype in extras
-        // Launch with intent
+        Intent intent = TripListActivity.getTripListActivityIntent(getApplicationContext(), lineType);
+        startActivity(intent);
     }
 }

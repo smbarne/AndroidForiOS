@@ -1,14 +1,12 @@
 package com.example.androidforios.app.fragments;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.view.View.OnClickListener;
@@ -19,13 +17,10 @@ import com.example.androidforios.app.R;
 import com.example.androidforios.app.adapters.LineTypeArrayAdapter;
 import com.example.androidforios.app.data.model.TripList;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link SubwayListFragment.OnFragmentInteractionListener} interface
+ * {@link com.example.androidforios.app.fragments.SubwayListFragment.SubwayLineFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link SubwayListFragment#newInstance} factory method to
  * create an instance of this fragment.
@@ -33,8 +28,8 @@ import java.util.List;
  */
 public class SubwayListFragment extends Fragment {
 
-    protected OnFragmentInteractionListener mListener;
-    protected SubwayListFragmentViewHolder viewHolder;
+    protected SubwayLineFragmentInteractionListener mListener;
+    protected SubwayListFragmentViewHolder mViewHolder;
 
     /**
      * Use this factory method to create a new instance of
@@ -58,28 +53,28 @@ public class SubwayListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Initialize the convienence viewholder class and inflate the layout for
         // this fragment
-        viewHolder = new SubwayListFragmentViewHolder();
-        return inflater.inflate(viewHolder.getLayoutResourceID(), container, false);
+        mViewHolder = new SubwayListFragmentViewHolder();
+        return inflater.inflate(mViewHolder.getLayoutResourceID(), container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        viewHolder.populate(view);
+        mViewHolder.populate(view);
 
-        LineTypeArrayAdapter listDataAdapter = new LineTypeArrayAdapter(getActivity(), TripList.LineType.values());
-        viewHolder.subwayListView.setAdapter(listDataAdapter);
+        final LineTypeArrayAdapter listDataAdapter = new LineTypeArrayAdapter(getActivity(), TripList.LineType.values());
+        mViewHolder.subwayListView.setAdapter(listDataAdapter);
 
-        viewHolder.subwayListView.setOnItemClickListener(new OnItemClickListener() {
+        mViewHolder.subwayListView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (mListener != null) {
-                    // TODO: Go to next activity with lineType
+                    mListener.onLineTypeSelected(listDataAdapter.getItem(position));
                 }
             }
         });
 
-        viewHolder.helloWorldButton.setOnClickListener(new OnClickListener() {
+        mViewHolder.helloWorldButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), R.string.application_description, Toast.LENGTH_SHORT).show();
@@ -91,10 +86,10 @@ public class SubwayListFragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (OnFragmentInteractionListener) activity;
+            mListener = (SubwayLineFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
+                    + " must implement SubwayLineFragmentInteractionListener");
         }
     }
 
@@ -115,7 +110,7 @@ public class SubwayListFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
+    public interface SubwayLineFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onLineTypeSelected(TripList.LineType lineType);
     }
