@@ -53,6 +53,8 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
     
     [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forState:UIControlStateNormal];
     [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor rzRedPressed]] forState:UIControlStateHighlighted];
+    
+    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStylePlain target:self action:@selector(didPressAboutButton:)]];
 }
 
 #pragma mark - UITableViewDataSource
@@ -94,6 +96,11 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
 - (IBAction)didPressAlertButton:(id)sender
 {
     [[[UIAlertView alloc] initWithTitle:@"Hello World" message:kMBTAApplicationDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
+- (IBAction)didPressAboutButton:(id)sender
+{
+    [[[UIAlertView alloc] initWithTitle:@"About" message:kMBTAApplicationDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 @end

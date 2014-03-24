@@ -143,14 +143,14 @@
 			name = "Trip Detail";
 			sourceTree = "<group>";
 		};
-		8330B59E18DF5E36005E56AF /* Subway Selection */ = {
+		8330B59E18DF5E36005E56AF /* Subway List */ = {
 			isa = PBXGroup;
 			children = (
 				83A4C13418DC8AE700DD378B /* MBTASubwayListViewController.h */,
 				83A4C13518DC8AE700DD378B /* MBTASubwayListViewController.m */,
 				83A4C13A18DC8B2900DD378B /* MBTASubwayListViewController.xib */,
 			);
-			name = "Subway Selection";
+			name = "Subway List";
 			sourceTree = "<group>";
 		};
 		8330B59F18DF6523005E56AF /* Header Views */ = {
@@ -248,7 +248,7 @@
 		83A4C12C18DC89E300DD378B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8330B59E18DF5E36005E56AF /* Subway Selection */,
+				8330B59E18DF5E36005E56AF /* Subway List */,
 				8330B59D18DF5E2F005E56AF /* Trip Detail */,
 				8330B59C18DF5E29005E56AF /* Trip List */,
 			);
