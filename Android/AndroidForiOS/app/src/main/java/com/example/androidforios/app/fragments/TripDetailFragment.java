@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.androidforios.app.adapters.PredictionArrayAdapter;
 import com.example.androidforios.app.data.model.Prediction;
 import com.example.androidforios.app.data.model.Trip;
+import com.example.androidforios.app.views.TripDetailsView;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -61,9 +62,14 @@ public class TripDetailFragment extends ListFragment {
         Prediction[] predictions= mTrip.predictions.toArray(new Prediction[mTrip.predictions.size()]);
         PredictionArrayAdapter predictionArrayAdapter = new PredictionArrayAdapter(getActivity().getApplicationContext(), predictions);
         setListAdapter(predictionArrayAdapter);
-
-        // TODO: add header view
-
         return super.onCreateView(inflater,container, savedInstanceState);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TripDetailsView headerView = new TripDetailsView(getActivity());
+        headerView.updateFromTripObject(mTrip);
+        getListView().addHeaderView(headerView);
     }
 }

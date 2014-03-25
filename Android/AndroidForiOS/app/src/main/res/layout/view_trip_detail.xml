@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/view_trip_detail"
-    android:orientation="vertical"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#666"
-    android:padding="@dimen/Padding.Large">
+    android:layout_height="wrap_content" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -112,4 +107,4 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-</LinearLayout>
+</merge>
