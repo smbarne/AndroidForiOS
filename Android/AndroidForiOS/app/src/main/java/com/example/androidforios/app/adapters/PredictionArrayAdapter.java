@@ -10,6 +10,10 @@ import android.widget.TextView;
 import com.example.androidforios.app.R;
 import com.example.androidforios.app.data.model.Prediction;
 
+/**
+ * An {@link android.widget.ArrayAdapter} that adapts {@link com.example.androidforios.app.data.model.Prediction} model
+ * objects to {@code view_three_item_list_view} views.
+ */
 public class PredictionArrayAdapter extends ArrayAdapter<Prediction> {
 
     int LAYOUT_RESOURCE_ID = R.layout.view_three_item_list_view;

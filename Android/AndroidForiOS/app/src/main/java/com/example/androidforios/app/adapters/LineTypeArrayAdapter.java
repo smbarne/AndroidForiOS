@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import com.example.androidforios.app.data.model.TripList;
 
+/**
+ * An {@link android.widget.ArrayAdapter} which formats {@link com.example.androidforios.app.data.model.TripList.LineType}
+ * subway line enumerated values into listview views based on {@code simple_list_item_1}.
+ */
 public class LineTypeArrayAdapter extends ArrayAdapter<TripList.LineType> {
 
     int LAYOUT_RESOURCE_ID = android.R.layout.simple_list_item_1;

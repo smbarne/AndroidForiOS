@@ -13,15 +13,20 @@ import com.example.androidforios.app.fragments.TripListFragment;
 import com.example.androidforios.app.fragments.TripListFragment.TripListFragmentInteractionListener;
 
 /**
- * Created by stephen.barnes on 3/23/14.
+ * An {@link android.app.Activity} class that shows a list of trips for a
+ * subway line.
+ *
+ * Created by Stephen Barnes on 3/23/14.
  */
 public class TripListActivity extends FragmentActivity implements TripListFragmentInteractionListener {
 
+
+
     /**
-     *
-     * @param context
-     * @param lineType
-     * @return
+     * Create an {@link Intent} to launch a new {@link TripListActivity} for a particular subway line.
+     * @param context The {@link Context} used to create the {@link Intent}.
+     * @param lineType The subway line to show trips for.
+     * @return A {@link Intent} that can be used to start a new {@link TripListActivity}.
      */
     public static Intent getTripListActivityIntent(Context context, TripList.LineType lineType) {
         Intent intent = new Intent(context, TripListActivity.class);
@@ -29,6 +34,9 @@ public class TripListActivity extends FragmentActivity implements TripListFragme
         return intent;
     }
 
+    /**
+     * A class containing the keys used for storing objects on the {@link TripListActivity}.
+     */
     public static final class TripListActivityState {
         public static final String KEY_ACTIVITY_TRIP_LIST_LINE_TYPE = "KEY_ACTIVITY_TRIP_LIST_LINE_TYPE";
     }
@@ -41,6 +49,7 @@ public class TripListActivity extends FragmentActivity implements TripListFragme
         getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_trip_list);
 
+        // Restore the instance variable from the extra on activity create
         mLineType = TripList.LineType.getLineType(getIntent().getStringExtra(TripListActivityState.KEY_ACTIVITY_TRIP_LIST_LINE_TYPE));
         setTitle(mLineType.getLineName());
 
@@ -52,7 +61,10 @@ public class TripListActivity extends FragmentActivity implements TripListFragme
         }
     }
 
-    @Override
+    /**
+     * Create and show the {@link TripDetailActivity} for a particular trip.
+     * @param trip The {@link Trip} to show details for.
+     */
     public void onTripSelected(Trip trip) {
         Intent tripDetailIntent = TripDetailActivity.getTripDetailActivityIntent(this, trip);
         startActivity(tripDetailIntent);

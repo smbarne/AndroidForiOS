@@ -10,6 +10,10 @@ import android.widget.TextView;
 import com.example.androidforios.app.data.model.Trip;
 import com.example.androidforios.app.R;
 
+/**
+ * An {@link android.widget.ArrayAdapter} that adapts {@link com.example.androidforios.app.data.model.Trip}
+ * model objects for {@code view_three_item_list_view} Views.
+ */
 public class TripArrayAdapter extends ArrayAdapter<Trip> {
 
     int LAYOUT_RESOURCE_ID = R.layout.view_three_item_list_view;

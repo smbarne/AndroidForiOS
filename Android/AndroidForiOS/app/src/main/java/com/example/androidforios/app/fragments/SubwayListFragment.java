@@ -99,7 +99,6 @@ public class SubwayListFragment extends Fragment {
         mListener = null;
     }
 
-    // TODO: Rename
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -111,10 +110,13 @@ public class SubwayListFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface SubwayLineFragmentInteractionListener {
-        // TODO: Update argument type and name
         public void onLineTypeSelected(TripList.LineType lineType);
     }
 
+    /**
+     * A class that contains the views for the {@link com.example.androidforios.app.fragments.SubwayListFragment}
+     * that makes it convenient to access all views.
+     */
     private static class SubwayListFragmentViewHolder {
         private static final int LAYOUT_RESOURCE_ID = R.layout.fragment_subway_list;
 

@@ -12,6 +12,12 @@ import com.example.androidforios.app.data.model.TripList;
 import com.example.androidforios.app.fragments.SubwayListFragment;
 import com.example.androidforios.app.fragments.SubwayListFragment.SubwayLineFragmentInteractionListener;
 
+/**
+ * Class that is the primary entry point for the MBTA Subway Sample app.  It contains
+ * one fragment that shows a list of subways to choose from.
+ *
+ * Created by Stephen Barnes on 3/23/14.
+ */
 public class MainActivity extends FragmentActivity implements SubwayLineFragmentInteractionListener {
 
     @Override
@@ -45,6 +51,10 @@ public class MainActivity extends FragmentActivity implements SubwayLineFragment
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Move to the next activity after a user has selected a subway line.
+     * @param lineType the subway line the user wants to see details for
+     */
     public void onLineTypeSelected(TripList.LineType lineType)
     {
         Intent intent = TripListActivity.getTripListActivityIntent(getApplicationContext(), lineType);
