@@ -57,19 +57,15 @@ public class TripDetailFragment extends ListFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        Prediction[] predictions= mTrip.predictions.toArray(new Prediction[mTrip.predictions.size()]);
-        PredictionArrayAdapter predictionArrayAdapter = new PredictionArrayAdapter(getActivity().getApplicationContext(), predictions);
-        setListAdapter(predictionArrayAdapter);
-        return super.onCreateView(inflater,container, savedInstanceState);
-    }
+    public void onActivityCreated (Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
         TripDetailsView headerView = new TripDetailsView(getActivity());
         headerView.updateFromTripObject(mTrip);
         getListView().addHeaderView(headerView);
+
+        Prediction[] predictions= mTrip.predictions.toArray(new Prediction[mTrip.predictions.size()]);
+        PredictionArrayAdapter predictionArrayAdapter = new PredictionArrayAdapter(getActivity().getApplicationContext(), predictions);
+        setListAdapter(predictionArrayAdapter);
     }
 }
