@@ -8,15 +8,15 @@ Sample data from the [MBTA](http://www.mbta.com/rider_tools/developers/default.a
 ## iOS Screenshots
 
 <p align="center" >
-<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen1.png" alt="iOS Root Screen" />
-<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen2.png" alt="iOS Detail Screen" />
+<img height="350" hspace="10" style="padding: 10px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen1.png" alt="iOS Root Screen" />  
+<img height="350" hspace="10" style="padding: 10px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen2.png" alt="iOS Detail Screen" />
 </p>
 
 ## Android Screenshots
 
 <p align="center" >
-<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen1.png" alt="Android Root Screen" />
-<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen2.png" alt="Android Detail Screen" />
+<img height="350" hspace="10" style="padding: 10px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen1.png" alt="Android Root Screen" />
+<img height="350" hspace="10" style="padding: 10px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen2.png" alt="Android Detail Screen" />
 </p>
 
 ## License
