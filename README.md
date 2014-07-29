@@ -7,12 +7,17 @@ Sample data from the [MBTA](http://www.mbta.com/rider_tools/developers/default.a
 
 ## iOS Screenshots
 
-![iOS Root Screen](https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen1.png)
-![iOS Detail Screen](https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen2.png)
+<p align="center" >
+<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen1.png" alt="iOS Root Screen" />
+<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/iOS_Screen2.png" alt="iOS Detail Screen" />
+</p>
 
 ## Android Screenshots
-![Android Root Screen](https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen1.png)
-![Android Detail Screen](https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen2.png)
+
+<p align="center" >
+<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen1.png" alt="Android Root Screen" />
+<img style="padding: 10px; max-height: 350px;" src="https://raw.githubusercontent.com/smbarne/AndroidForiOS/master/Data/Screenshots/Android_Screen2.png" alt="Android Detail Screen" />
+</p>
 
 ## License
 This project is licensed under the MIT License.
