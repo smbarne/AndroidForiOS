@@ -33,3 +33,6 @@ proguard/
 
 # Mac OS
 .DS_Store
+iOS/AndroidForiOS.xcodeproj/xcuserdata
+iOS/AndroidForiOS.xcodeproj/project.xcworkspace/xcuserdata
+Android/build

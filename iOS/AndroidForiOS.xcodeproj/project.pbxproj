@@ -24,9 +24,6 @@
 		83A4C13618DC8AE700DD378B /* MBTASubwayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C13518DC8AE700DD378B /* MBTASubwayListViewController.m */; };
 		83A4C13818DC8AEF00DD378B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13718DC8AEF00DD378B /* Images.xcassets */; };
 		83A4C13B18DC8B2900DD378B /* MBTASubwayListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13A18DC8B2900DD378B /* MBTASubwayListViewController.xib */; };
-		83A4C14018DCA6DD00DD378B /* Blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13D18DCA6DD00DD378B /* Blue.json */; };
-		83A4C14118DCA6DD00DD378B /* Orange.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13E18DCA6DD00DD378B /* Orange.json */; };
-		83A4C14218DCA6DD00DD378B /* Red.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C13F18DCA6DD00DD378B /* Red.json */; };
 		83A4C14B18DCA7E900DD378B /* MBTASubwayTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C14918DCA7E900DD378B /* MBTASubwayTripCell.m */; };
 		83A4C14C18DCA7E900DD378B /* MBTASubwayTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A4C14A18DCA7E900DD378B /* MBTASubwayTripCell.xib */; };
 		83A4C15218DCA99600DD378B /* MBTATripList.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15118DCA99600DD378B /* MBTATripList.m */; };
@@ -38,6 +35,9 @@
 		83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */; };
 		83A4C16818DF571200DD378B /* MBTASubwayTripTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */; };
 		83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */; };
+		E1ED7636198825CD0010C4DB /* Blue.json in Resources */ = {isa = PBXBuildFile; fileRef = E1ED7635198825CD0010C4DB /* Blue.json */; };
+		E1ED7638198825DE0010C4DB /* Orange.json in Resources */ = {isa = PBXBuildFile; fileRef = E1ED7637198825DE0010C4DB /* Orange.json */; };
+		E1ED763A198825EC0010C4DB /* Red.json in Resources */ = {isa = PBXBuildFile; fileRef = E1ED7639198825EC0010C4DB /* Red.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +75,6 @@
 		83A4C13718DC8AEF00DD378B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		83A4C13918DC8B0E00DD378B /* AndroidForiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AndroidForiOS-Prefix.pch"; sourceTree = "<group>"; };
 		83A4C13A18DC8B2900DD378B /* MBTASubwayListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MBTASubwayListViewController.xib; path = "View Controllers/MBTASubwayListViewController.xib"; sourceTree = "<group>"; };
-		83A4C13D18DCA6DD00DD378B /* Blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Blue.json; path = ../../../Data/v2.0/Blue.json; sourceTree = "<group>"; };
-		83A4C13E18DCA6DD00DD378B /* Orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Orange.json; path = ../../../Data/v2.0/Orange.json; sourceTree = "<group>"; };
-		83A4C13F18DCA6DD00DD378B /* Red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Red.json; path = ../../../Data/v2.0/Red.json; sourceTree = "<group>"; };
 		83A4C14818DCA7E900DD378B /* MBTASubwayTripCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTASubwayTripCell.h; path = Views/Cells/MBTASubwayTripCell.h; sourceTree = "<group>"; };
 		83A4C14918DCA7E900DD378B /* MBTASubwayTripCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripCell.m; path = Views/Cells/MBTASubwayTripCell.m; sourceTree = "<group>"; };
 		83A4C14A18DCA7E900DD378B /* MBTASubwayTripCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MBTASubwayTripCell.xib; path = Views/Cells/MBTASubwayTripCell.xib; sourceTree = "<group>"; };
@@ -99,6 +96,9 @@
 		83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripTableTableViewController.m; path = "View Controllers/MBTASubwayTripTableTableViewController.m"; sourceTree = "<group>"; };
 		83A4C16918DF57DD00DD378B /* MBTATripListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATripListTableViewController.h; path = "View Controllers/MBTATripListTableViewController.h"; sourceTree = "<group>"; };
 		83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTATripListTableViewController.m; path = "View Controllers/MBTATripListTableViewController.m"; sourceTree = "<group>"; };
+		E1ED7635198825CD0010C4DB /* Blue.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Blue.json; path = ../../Data/v2.0/Blue.json; sourceTree = "<group>"; };
+		E1ED7637198825DE0010C4DB /* Orange.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Orange.json; path = ../../Data/v2.0/Orange.json; sourceTree = "<group>"; };
+		E1ED7639198825EC0010C4DB /* Red.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Red.json; path = ../../Data/v2.0/Red.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,9 +267,9 @@
 		83A4C13C18DCA6D600DD378B /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				83A4C13D18DCA6DD00DD378B /* Blue.json */,
-				83A4C13E18DCA6DD00DD378B /* Orange.json */,
-				83A4C13F18DCA6DD00DD378B /* Red.json */,
+				E1ED7639198825EC0010C4DB /* Red.json */,
+				E1ED7637198825DE0010C4DB /* Orange.json */,
+				E1ED7635198825CD0010C4DB /* Blue.json */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -416,13 +416,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ED763A198825EC0010C4DB /* Red.json in Resources */,
+				E1ED7638198825DE0010C4DB /* Orange.json in Resources */,
+				E1ED7636198825CD0010C4DB /* Blue.json in Resources */,
 				83A4C10118DC891E00DD378B /* InfoPlist.strings in Resources */,
-				83A4C14018DCA6DD00DD378B /* Blue.json in Resources */,
 				83A4C13B18DC8B2900DD378B /* MBTASubwayListViewController.xib in Resources */,
-				83A4C14218DCA6DD00DD378B /* Red.json in Resources */,
 				8330B5A418DF6571005E56AF /* MBTATripHeaderView.xib in Resources */,
 				83A4C13818DC8AEF00DD378B /* Images.xcassets in Resources */,
-				83A4C14118DCA6DD00DD378B /* Orange.json in Resources */,
 				83A4C14C18DCA7E900DD378B /* MBTASubwayTripCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
