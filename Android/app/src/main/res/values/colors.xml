@@ -2,9 +2,9 @@
 <resources>
     <color name="RZRed">#ec594d</color>
 
-    <color name="Button.Text">#ffffff</color>
-    <color name="Button.Background">#FF4444</color>
-    <color name="Button.Selected">#CC0000</color>
+    <color name="Button.Text">@android:color/white</color>
+    <color name="Button.Background">@color/Material.Red</color>
+    <color name="Button.Selected">@color/Material.DarkRed</color>
 
     <color name="Header.Background">#333</color>
 
