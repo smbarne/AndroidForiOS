@@ -2,8 +2,9 @@ package com.example.androidforios.app.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
 import com.example.androidforios.app.R;
@@ -18,9 +19,7 @@ import com.example.androidforios.app.fragments.TripListFragment.TripListFragment
  *
  * Created by Stephen Barnes on 3/23/14.
  */
-public class TripListActivity extends FragmentActivity implements TripListFragmentInteractionListener {
-
-
+public class TripListActivity extends ActionBarActivity implements TripListFragmentInteractionListener {
 
     /**
      * Create an {@link Intent} to launch a new {@link TripListActivity} for a particular subway line.
@@ -46,8 +45,8 @@ public class TripListActivity extends FragmentActivity implements TripListFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_trip_list);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Restore the instance variable from the extra on activity create
         mLineType = TripList.LineType.getLineType(getIntent().getStringExtra(TripListActivityState.KEY_ACTIVITY_TRIP_LIST_LINE_TYPE));
@@ -76,6 +75,11 @@ public class TripListActivity extends FragmentActivity implements TripListFragme
             case android.R.id.home:
                 setResult(RESULT_CANCELED);
                 finish();
+
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+                    overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+                }
+
                 return true;
         }
 

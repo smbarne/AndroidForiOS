@@ -2,8 +2,10 @@ package com.example.androidforios.app.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -18,7 +20,7 @@ import com.example.androidforios.app.fragments.SubwayListFragment.SubwayLineFrag
  *
  * Created by Stephen Barnes on 3/23/14.
  */
-public class MainActivity extends FragmentActivity implements SubwayLineFragmentInteractionListener {
+public class MainActivity extends ActionBarActivity implements SubwayLineFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +57,8 @@ public class MainActivity extends FragmentActivity implements SubwayLineFragment
      * Move to the next activity after a user has selected a subway line.
      * @param lineType the subway line the user wants to see details for
      */
-    public void onLineTypeSelected(TripList.LineType lineType)
-    {
+    public void onLineTypeSelected(TripList.LineType lineType) {
         Intent intent = TripListActivity.getTripListActivityIntent(getApplicationContext(), lineType);
-        startActivity(intent);
+        ActivityCompat.startActivity(this, intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
 }

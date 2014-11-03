@@ -28,7 +28,7 @@
         android:layout_toLeftOf="@+id/view_three_item_list_view_right_text_view"
         android:paddingRight="@dimen/Padding.Standard"
         android:paddingLeft="@dimen/Padding.Standard"
-        android:textColor="#333"/>
+        android:textColor="@android:color/primary_text_light"/>
 
     <TextView
         android:id="@+id/view_three_item_list_view_right_text_view"
@@ -39,6 +39,6 @@
         android:layout_alignParentRight="true"
         android:paddingLeft="@dimen/Padding.Standard"
         android:text="Right"
-        android:textColor="#333"/>
+        android:textColor="@android:color/primary_text_light"/>
 ®
 </RelativeLayout>

@@ -3,7 +3,7 @@ package com.example.androidforios.app.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
 import com.example.androidforios.app.R;
@@ -15,7 +15,7 @@ import com.example.androidforios.app.fragments.TripDetailFragment;
  *
  * Created by Stephen Barnes on 3/23/14.
  */
-public class TripDetailActivity extends FragmentActivity {
+public class TripDetailActivity extends ActionBarActivity {
 
     /**
      * Create an Intent to launch a {@link TripDetailActivity} from a unique subway trip.
@@ -41,8 +41,8 @@ public class TripDetailActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_trip_detail);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Restore the instance variable from the extra on activity create
         mTrip = getIntent().getParcelableExtra(TripDetailActivityState.KEY_ACTIVITY_TRIP_OBJECT);
