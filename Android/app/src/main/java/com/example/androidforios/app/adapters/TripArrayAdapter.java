@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.androidforios.app.data.model.Trip;
 import com.example.androidforios.app.R;
 
+import java.text.DateFormat;
+
 /**
  * An {@link android.widget.ArrayAdapter} that adapts {@link com.example.androidforios.app.data.model.Trip}
  * model objects for {@code view_three_item_list_view} Views.
@@ -42,8 +44,12 @@ public class TripArrayAdapter extends ArrayAdapter<Trip> {
         TextView trainNameTextView = (TextView)inflatedView.findViewById(R.id.view_three_item_list_view_right_text_view);
 
         destinationTextView.setText(trip.destination);
-//        timeStampTextView
-        timeStampTextView.setText("");
+        if (trip.positionTimeStamp != null) {
+            timeStampTextView.setText(DateFormat.getDateTimeInstance().format(trip.positionTimeStamp));
+            timeStampTextView.setVisibility(View.VISIBLE);
+        } else {
+            timeStampTextView.setVisibility(View.GONE);
+        }
         trainNameTextView.setText(trip.trainName);
 
         return inflatedView;

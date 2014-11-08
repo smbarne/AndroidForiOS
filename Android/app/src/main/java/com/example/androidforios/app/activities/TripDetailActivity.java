@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import com.example.androidforios.app.R;
 import com.example.androidforios.app.data.model.Trip;
+import com.example.androidforios.app.data.model.TripList;
 import com.example.androidforios.app.fragments.TripDetailFragment;
 
 /**
@@ -21,11 +22,13 @@ public class TripDetailActivity extends ActionBarActivity {
      * Create an Intent to launch a {@link TripDetailActivity} from a unique subway trip.
      * @param context The {@link Context} used to create the {@link Intent}.
      * @param trip The {@link Trip} to show the details of.
+     * @param lineType The {@link TripList.LineType} the trip detail is a part of.
      * @return A {@link Intent} that can be used to start a new {@link TripDetailActivity}.
      */
-    public static Intent getTripDetailActivityIntent(Context context, Trip trip) {
+    public static Intent getTripDetailActivityIntent(Context context, Trip trip, TripList.LineType lineType) {
         Intent intent = new Intent(context, TripDetailActivity.class);
         intent.putExtra(TripDetailActivityState.KEY_ACTIVITY_TRIP_OBJECT, trip);
+        intent.putExtra(TripDetailActivityState.KEY_ACTIVITY_TRIP_DETAIL_LINE_TYPE, lineType.getLineName());
         return intent;
     }
 
@@ -34,12 +37,17 @@ public class TripDetailActivity extends ActionBarActivity {
      */
     public static final class TripDetailActivityState {
         public static final String KEY_ACTIVITY_TRIP_OBJECT = "KEY_ACTIVITY_TRIP_OBJECT";
+        public static final String KEY_ACTIVITY_TRIP_DETAIL_LINE_TYPE = "KEY_ACTIVITY_TRIP_DETAIL_LINE_TYPE";
     }
 
     Trip mTrip;
+    TripList.LineType mLineType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mLineType = TripList.LineType.getLineType(getIntent().getStringExtra(TripDetailActivityState.KEY_ACTIVITY_TRIP_DETAIL_LINE_TYPE));
+        setTheme(mLineType.getLineThemeResourceId());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

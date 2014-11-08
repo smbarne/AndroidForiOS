@@ -20,16 +20,33 @@ import java.util.List;
 public class TripList implements Parcelable {
 
     public enum LineType {
-        RED { public String getLineName() {return "Red"; }
-            public int getLineColorResourceId() {return R.color.LineType_Red;}},
-        ORANGE { public String getLineName() {return "Orange"; }
-            public int getLineColorResourceId() {return R.color.LineType_Orange;}},
-        BLUE { public String getLineName() {return "Blue"; }
-            public int getLineColorResourceId() {return R.color.LineType_Blue;}};
+        RED {
+            public String getLineName() {return "Red"; }
+            public int getLineColorResourceId() {return R.color.LineType_Red;}
+            public int getLineThemeResourceId() {return R.style.AppTheme_Red;}
+        },
+        ORANGE {
+            public String getLineName() {return "Orange"; }
+            public int getLineColorResourceId() {return R.color.LineType_Orange;}
+            public int getLineThemeResourceId() {return R.style.AppTheme_Orange;}
+        },
+        BLUE {
+            public String getLineName() {return "Blue"; }
+            public int getLineColorResourceId() {return R.color.LineType_Blue;}
+            public int getLineThemeResourceId() {return R.style.AppTheme_Blue;}
+        };
 
         public String getFileName() { return this.getLineName() + ".json"; }
+
         public abstract String getLineName();
         public abstract int getLineColorResourceId();
+        public abstract int getLineThemeResourceId();
+
+        /**
+         * Create a linetype object from a string value.
+         * @param lineTypeString the string representation for the subway line type. ex: "Red"
+         * @return a new linetype enum.
+         */
         public static LineType getLineType(String lineTypeString) {
             LineType lineType = LineType.RED;
             if (lineTypeString.equals("Red")) {
@@ -56,6 +73,10 @@ public class TripList implements Parcelable {
     public LineType subwayLine;
     public List<Trip> trips;
 
+    /**
+     * Import Trip data from structured JSON data.
+     * @param jsonData the read in JSON data with MBTA trip data.
+     */
     public void importDataFromJSON(JSONObject jsonData) {
         try {
             // Import Line Type

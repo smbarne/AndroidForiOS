@@ -44,12 +44,13 @@ public class TripListActivity extends ActionBarActivity implements TripListFragm
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Restore the instance variable from the extra on activity create
+        mLineType = TripList.LineType.getLineType(getIntent().getStringExtra(TripListActivityState.KEY_ACTIVITY_TRIP_LIST_LINE_TYPE));
+        setTheme(mLineType.getLineThemeResourceId());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip_list);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // Restore the instance variable from the extra on activity create
-        mLineType = TripList.LineType.getLineType(getIntent().getStringExtra(TripListActivityState.KEY_ACTIVITY_TRIP_LIST_LINE_TYPE));
         setTitle(mLineType.getLineName());
 
         if (savedInstanceState == null) {
@@ -65,7 +66,7 @@ public class TripListActivity extends ActionBarActivity implements TripListFragm
      * @param trip The {@link Trip} to show details for.
      */
     public void onTripSelected(Trip trip) {
-        Intent tripDetailIntent = TripDetailActivity.getTripDetailActivityIntent(this, trip);
+        Intent tripDetailIntent = TripDetailActivity.getTripDetailActivityIntent(this, trip, mLineType);
         startActivity(tripDetailIntent);
     }
 

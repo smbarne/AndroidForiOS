@@ -42,7 +42,7 @@ public class PredictionArrayAdapter extends ArrayAdapter<Prediction> {
         TextView stopSecondsTextView = (TextView)inflatedView.findViewById(R.id.view_three_item_list_view_right_text_view);
 
         stopNameTextView.setText(prediction.stopName);
-        middleTextView.setText("");
+        middleTextView.setVisibility(View.GONE);
         stopSecondsTextView.setText(prediction.stopSeconds.toString());
 
         return inflatedView;

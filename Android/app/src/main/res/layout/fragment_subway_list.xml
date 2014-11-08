@@ -15,9 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/Button.Default.Height"
         android:minHeight="@dimen/Button.Default.Height"
-        android:background="@drawable/button_red_selector"
         android:text="@string/hello_world"
-        android:textColor="@color/Button.Text"
         android:layout_alignParentBottom="true"
         android:gravity="center"/>
 
