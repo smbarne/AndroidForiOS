@@ -20,8 +20,11 @@ NSString* const kMBTASubwayTripCellReuseId = @"kMBTASubwayTripCellReuseId";
 @property (weak, nonatomic) IBOutlet UILabel *destinationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trainNameLabel;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *timestampTopSpacingConstraint;
 @end
+
+static const CGFloat kMBTASubwayTripCellEstimatedHeight = 60.0f;
+static const CGFloat kMBTALineSpacing					= 4.0f;
 
 @implementation MBTASubwayTripCell
 
@@ -30,6 +33,13 @@ NSString* const kMBTASubwayTripCellReuseId = @"kMBTASubwayTripCellReuseId";
 + (NSString *)reuseId
 {
     return kMBTASubwayTripCellReuseId;
+}
+
+#pragma mark - Estimated Height
+
++ (CGFloat)estimatedHeight
+{
+	return kMBTASubwayTripCellEstimatedHeight;
 }
 
 #pragma mark - Cell Lifecycle
@@ -49,6 +59,7 @@ NSString* const kMBTASubwayTripCellReuseId = @"kMBTASubwayTripCellReuseId";
     [self.destinationLabel setText:nil];
     [self.trainNameLabel setText:nil];
     [self.timeStampLabel setText:nil];
+	self.timestampTopSpacingConstraint.constant = 0.0f;
 }
 
 #pragma mark - Setters
@@ -57,9 +68,12 @@ NSString* const kMBTASubwayTripCellReuseId = @"kMBTASubwayTripCellReuseId";
 {
     [self.destinationLabel setText:trip.destination];
     [self.trainNameLabel setText:trip.trainName];
-    
-    NSDateFormatter *dateFormatter = [MBTADataManager dataDateFormatter];
-    [self.timeStampLabel setText:[dateFormatter stringFromDate:trip.positionTimeStamp]];
+
+	if (trip.positionTimeStamp) {
+		NSDateFormatter *dateFormatter = [MBTADataManager dataDateFormatter];
+		[self.timeStampLabel setText:[dateFormatter stringFromDate:trip.positionTimeStamp]];
+		self.timestampTopSpacingConstraint.constant = kMBTALineSpacing;
+	}
 }
 
 @end

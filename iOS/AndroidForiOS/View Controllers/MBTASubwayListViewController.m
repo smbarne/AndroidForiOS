@@ -21,6 +21,7 @@
 #import "NSString+lineType.h"
 #import "UIColor+MBTAColors.h"
 #import "UIImage+QuickImage.h"
+#import "UIViewController+MBTAColors.h"
 
 static NSString* const kMBTASubwayListViewControllerTitle = @"Subway Lines";
 static NSString* const kMBTASubwayLineCell = @"kMBTASubwayLineCell";
@@ -39,6 +40,10 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
 
 @implementation MBTASubwayListViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+	[self clearNavbarColorStyles];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -50,10 +55,7 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
         [subwayLines addObject:[NSNumber numberWithInteger:i]];
     }
     self.data = subwayLines;
-    
-    [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forState:UIControlStateNormal];
-    [self.alertButton setBackgroundImage:[UIImage imageWithColor:[UIColor rzRedPressed]] forState:UIControlStateHighlighted];
-    
+
     [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStylePlain target:self action:@selector(didPressAboutButton:)]];
 }
 
@@ -95,12 +97,20 @@ NSString* const kMBTAApplicationDescription = @"This application demonstrates th
 
 - (IBAction)didPressAlertButton:(id)sender
 {
-    [[[UIAlertView alloc] initWithTitle:@"Hello World" message:kMBTAApplicationDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hello World", @"Hello World Message Title")
+								message:kMBTAApplicationDescription
+							   delegate:nil
+					  cancelButtonTitle:NSLocalizedString(@"OK", @"OK Button Title")
+					  otherButtonTitles:nil] show];
 }
 
 - (IBAction)didPressAboutButton:(id)sender
 {
-    [[[UIAlertView alloc] initWithTitle:@"About" message:kMBTAApplicationDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"About", @"About Button Title")
+								message:kMBTAApplicationDescription
+							   delegate:nil
+					  cancelButtonTitle:NSLocalizedString(@"OK", @"OK Button Title")
+					  otherButtonTitles:nil] show];
 }
 
 @end

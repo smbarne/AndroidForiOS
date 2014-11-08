@@ -35,6 +35,7 @@
 		83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */; };
 		83A4C16818DF571200DD378B /* MBTASubwayTripTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */; };
 		83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */; };
+		9D82D6F21A0DA70900DE8364 /* UIViewController+MBTAColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D82D6F11A0DA70900DE8364 /* UIViewController+MBTAColors.m */; };
 		E1ED7636198825CD0010C4DB /* Blue.json in Resources */ = {isa = PBXBuildFile; fileRef = E1ED7635198825CD0010C4DB /* Blue.json */; };
 		E1ED7638198825DE0010C4DB /* Orange.json in Resources */ = {isa = PBXBuildFile; fileRef = E1ED7637198825DE0010C4DB /* Orange.json */; };
 		E1ED763A198825EC0010C4DB /* Red.json in Resources */ = {isa = PBXBuildFile; fileRef = E1ED7639198825EC0010C4DB /* Red.json */; };
@@ -96,6 +97,8 @@
 		83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripTableTableViewController.m; path = "View Controllers/MBTASubwayTripTableTableViewController.m"; sourceTree = "<group>"; };
 		83A4C16918DF57DD00DD378B /* MBTATripListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATripListTableViewController.h; path = "View Controllers/MBTATripListTableViewController.h"; sourceTree = "<group>"; };
 		83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTATripListTableViewController.m; path = "View Controllers/MBTATripListTableViewController.m"; sourceTree = "<group>"; };
+		9D82D6F01A0DA70900DE8364 /* UIViewController+MBTAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MBTAColors.h"; path = "Utilities/UIViewController+MBTAColors.h"; sourceTree = "<group>"; };
+		9D82D6F11A0DA70900DE8364 /* UIViewController+MBTAColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MBTAColors.m"; path = "Utilities/UIViewController+MBTAColors.m"; sourceTree = "<group>"; };
 		E1ED7635198825CD0010C4DB /* Blue.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Blue.json; path = ../../Data/v2.0/Blue.json; sourceTree = "<group>"; };
 		E1ED7637198825DE0010C4DB /* Orange.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Orange.json; path = ../../Data/v2.0/Orange.json; sourceTree = "<group>"; };
 		E1ED7639198825EC0010C4DB /* Red.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Red.json; path = ../../Data/v2.0/Red.json; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				83A4C15E18DCB37600DD378B /* NSString+lineType.m */,
 				83A4C16018DCB38C00DD378B /* UIColor+MBTAColors.h */,
 				83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */,
+				9D82D6F01A0DA70900DE8364 /* UIViewController+MBTAColors.h */,
+				9D82D6F11A0DA70900DE8364 /* UIViewController+MBTAColors.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				83A4C15518DCA9A700DD378B /* MBTATrip.m in Sources */,
 				83A4C14B18DCA7E900DD378B /* MBTASubwayTripCell.m in Sources */,
 				83A4C13618DC8AE700DD378B /* MBTASubwayListViewController.m in Sources */,
+				9D82D6F21A0DA70900DE8364 /* UIViewController+MBTAColors.m in Sources */,
 				83A4C16218DCB38C00DD378B /* UIColor+MBTAColors.m in Sources */,
 				83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */,
 				8330B59A18DF5D50005E56AF /* MBTAPredictionCell.m in Sources */,
@@ -576,7 +582,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AndroidForiOS/AndroidForiOS-Prefix.pch";
 				INFOPLIST_FILE = "AndroidForiOS/AndroidForiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -589,7 +597,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AndroidForiOS/AndroidForiOS-Prefix.pch";
 				INFOPLIST_FILE = "AndroidForiOS/AndroidForiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

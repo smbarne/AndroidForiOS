@@ -17,6 +17,9 @@ OBJC_EXTERN NSString* const kMBTASubwayTripCellReuseId;
 #pragma mark - Cell Reuse Id
 + (NSString *)reuseId;
 
+#pragma mark - Estimated Height
++ (CGFloat)estimatedHeight;
+
 #pragma mark - Setters
 - (void)setFromTrip:(MBTATrip *)trip;
 

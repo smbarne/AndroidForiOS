@@ -21,12 +21,6 @@
 {
     MBTASubwayListViewController *initalVC = [[MBTASubwayListViewController alloc] init];
     self.rootNavigationController = [[UINavigationController alloc] initWithRootViewController:initalVC];
-
-	[[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
-	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-	[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-	[[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:self.rootNavigationController];

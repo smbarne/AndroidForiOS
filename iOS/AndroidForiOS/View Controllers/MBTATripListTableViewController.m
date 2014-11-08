@@ -19,6 +19,7 @@
 
 // Categories and Utilties
 #import "NSString+lineType.h"
+#import "UIViewController+MBTAColors.h"
 
 @interface MBTATripListTableViewController ()
 
@@ -39,6 +40,10 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[self configureNavbarForLineType:self.lineType];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,9 +58,15 @@
             [weakSelf.tableView reloadData];
         }
         else {
-            [[[UIAlertView alloc] initWithTitle:@"Uh Oh" message:@"Error loading data, sorry!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Uh Oh", @"Error Message Title - Uh Oh")
+										message:NSLocalizedString(@"Error loading data, sorry!", @"Error Message Description, can't load data")
+									   delegate:nil
+							  cancelButtonTitle:NSLocalizedString(@"OK", @"OK Button Title")
+							  otherButtonTitles:nil] show];
         }
     }];
+
+	self.tableView.estimatedRowHeight = [MBTASubwayTripCell estimatedHeight];
 }
 
 #pragma mark - Table view data source

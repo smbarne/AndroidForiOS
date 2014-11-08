@@ -31,16 +31,4 @@
     return colorForLineType;
 }
 
-#pragma mark - Application Colors
-
-+ (UIColor *)rzRed
-{
-    return [UIColor colorWithRed:0.925f green:0.349f blue:0.301f alpha:1.f];
-}
-
-+ (UIColor *)rzRedPressed
-{
-    return [UIColor colorWithRed:0.925f green:0.145f blue:0.f alpha:1.f];
-}
-
 @end

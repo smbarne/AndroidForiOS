@@ -11,10 +11,13 @@
 
 @interface UIColor (MBTAColors)
 
+/**
+ *  Return a color for a subway line type.
+ *
+ *  @param lineType the subway line type to configure the color for.  Ex: Red, Orange, Blue.
+ *
+ *  @return the correct subway line color.
+ */
 + (UIColor *)colorForLineType:(MBTALineType)lineType;
-
-#pragma mark - Application Colors
-+ (UIColor *)rzRed;
-+ (UIColor *)rzRedPressed;
 
 @end
