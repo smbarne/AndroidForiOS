@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?android:attr/listPreferredItemHeight"
-    android:padding="@dimen/Padding.Standard"
+    android:paddingTop="@dimen/Padding.Standard"
+    android:paddingBottom="@dimen/Padding.Standard"
     android:gravity="center_vertical">
 
     <TextView
         android:id="@+id/view_three_item_list_view_left_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="15dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
         android:gravity="center_vertical|left"
         android:textSize="@dimen/TextSize.Large"
         android:text="Left"
@@ -23,8 +24,8 @@
         android:id="@+id/view_three_item_list_view_middle_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
         android:gravity="center_vertical|left"
         android:textSize="@dimen/TextSize.Large"
         android:text="Middle"
