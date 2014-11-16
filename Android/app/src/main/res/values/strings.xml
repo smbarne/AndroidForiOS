@@ -7,4 +7,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="application_description">This application demonstrates the correlation between iOS and Android development using Subway data provided by the MBTA.</string>
 
+    <string name="SubwayTripList.Empty.Error">Uh oh, something went wrong.  Tap here to try again.</string>
+
 </resources>

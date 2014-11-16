@@ -1,7 +1,6 @@
 package com.example.androidforios.app.fragments;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
@@ -11,14 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.ViewFlipper;
 
 import com.example.androidforios.app.R;
 import com.example.androidforios.app.adapters.TripArrayAdapter;
 import com.example.androidforios.app.data.managers.DataManager;
 import com.example.androidforios.app.data.model.Trip;
 import com.example.androidforios.app.data.model.TripList;
+import com.smb.loadingbananapeel.LoadingBananaPeelView;
+
+import java.util.Random;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -29,7 +29,7 @@ import com.example.androidforios.app.data.model.TripList;
  * create an instance of this fragment.
  *
  */
-public class TripListFragment extends Fragment {
+public class TripListFragment extends Fragment implements LoadingBananaPeelView.BananaPeelActionListener {
 
     /**
      * The configuration flags for the Trip List Fragment.
@@ -43,6 +43,9 @@ public class TripListFragment extends Fragment {
     protected TripArrayAdapter mTripArrayAdapter;
     protected TripListFragmentInteractionListener mListener;
     protected TripListViewHolder mViewHolder;
+
+    protected Loader<TripList> mLoader;
+    private Random mRandom = new Random();
 
     /**
      * Use this factory method to create a new instance of
@@ -103,8 +106,9 @@ public class TripListFragment extends Fragment {
                 }
             }
         });
+        mViewHolder.loadingBananaPeelView.setBananaPeelListener(this);
 
-        getLoaderManager().initLoader(0, savedInstanceState, new LoaderManager.LoaderCallbacks<TripList>() {
+        mLoader = getLoaderManager().initLoader(0, savedInstanceState, new LoaderManager.LoaderCallbacks<TripList>() {
             @Override
             public Loader<TripList> onCreateLoader(int id, Bundle args) {
                 return new DataManager.SubwayLineLoader(getActivity(), mLineType);
@@ -115,16 +119,19 @@ public class TripListFragment extends Fragment {
                 setTripList(data);
 
                 if (mViewHolder != null) {
-                    int displayIndex = mViewHolder.viewFlipper.indexOfChild(mViewHolder.tripListView);
-                    mViewHolder.viewFlipper.setDisplayedChild(displayIndex);
+                    if (mRandom .nextInt() % 2 == 0) {
+                        mViewHolder.loadingBananaPeelView.showContent();
+                    } else {
+                        mViewHolder.loadingBananaPeelView.showBananaPeel();
+                    }
                 }
             }
 
             @Override
-            public void onLoaderReset(Loader<TripList> loader) {
+            public void onLoaderReset(Loader<TripList> loader) { }
+        });
 
-            }
-        }).forceLoad();
+        this.loadData();
     }
 
     @Override
@@ -144,6 +151,23 @@ public class TripListFragment extends Fragment {
         mListener = null;
     }
 
+    private void loadData() {
+        if (mLoader != null) {
+            if (mViewHolder != null && mViewHolder.loadingBananaPeelView != null) {
+                mViewHolder.loadingBananaPeelView.showLoading();
+            }
+            mLoader.forceLoad();
+        }
+    }
+
+    /**
+     * This interface is for acting on when the banapeel's empty stat is clicked.
+     */
+    @Override
+    public void onBananaPeelClick() {
+        this.loadData();
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -161,14 +185,12 @@ public class TripListFragment extends Fragment {
     private static class TripListViewHolder {
         private static final int LAYOUT_RESOURCE_ID = R.layout.fragment_subway_trip_list;
 
-        ViewFlipper viewFlipper;
-        ProgressBar tripListProgress;
         ListView tripListView;
+        LoadingBananaPeelView loadingBananaPeelView;
 
         public void populate(View view) {
-            viewFlipper = (ViewFlipper) view.findViewById(R.id.fragment_subway_trips_viewFlipper);
-            tripListProgress = (ProgressBar) view.findViewById(R.id.fragment_subway_trips_progress);
-            tripListView = (ListView) view.findViewById(R.id.fragment_subway_trips_listview);
+            loadingBananaPeelView = (LoadingBananaPeelView) view.findViewById(R.id.fragment_content_loading_view);
+            tripListView = (ListView) loadingBananaPeelView.getContentView();
         }
 
         public int getLayoutResourceID() {

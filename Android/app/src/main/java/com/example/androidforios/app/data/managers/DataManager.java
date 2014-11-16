@@ -17,6 +17,8 @@ import org.json.JSONObject;
 import android.content.res.AssetManager;
 import android.support.v4.content.AsyncTaskLoader;
 
+import static android.os.SystemClock.sleep;
+
 /**
  * Created by stephen.barnes on 3/23/14.
  */
@@ -91,6 +93,9 @@ public class DataManager {
         @Override
         public TripList loadInBackground() {
             TripList tripList = new TripList();
+
+            // TEMP
+            sleep(5000);
 
             try {
                 String subwayLineJSONString = stringFromAssetFolder(mLineType.getFileName(), this.getContext());

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9FD0ABDB-C3D4-46AB-B360-CCC7C5B5E570</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AndroidForiOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BBDDAB3FF68A314E6901C58D78756B6C72113F04</key>
+		<string>https://github.com/smbarne/AndroidForiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/AndroidForiOS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BBDDAB3FF68A314E6901C58D78756B6C72113F04</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/smbarne/AndroidForiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BBDDAB3FF68A314E6901C58D78756B6C72113F04</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BBDDAB3FF68A314E6901C58D78756B6C72113F04</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AndroidForiOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

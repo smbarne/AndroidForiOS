@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="10dp">
+
+    <!-- TODO: Asset and Padding consistency -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="20dp" >
+
+        <ImageView
+            android:id="@+id/bananaPeel_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Banana Peel: Empty State" />
+
+        <TextView
+            android:id="@+id/bananaPeel_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="20sp"
+        />
+
+        <!-- TODO: Use primary / secondary colors -->
+        <!-- TODO: tint the banana peel -->
+
+        <!--android:layout_marginBottom="@dimen/Padding.Gigantic"-->
+        <!--android:layout_marginLeft="@dimen/Padding.Gigantic"-->
+        <!--android:layout_marginRight="@dimen/Padding.Gigantic"-->
+        <!--android:layout_marginTop="@dimen/Padding.Gigantic"-->
+        <!--android:textColor="@color/TextColor.Light"-->
+        <!--android:textSize="@dimen/TextSize.Gigantic" />-->
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

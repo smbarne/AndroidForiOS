@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingBananaPeelView">
+        <attr name="bananaPeelDefaultMessageStringResource" format="reference" />
+        <attr name="bananaPeelDefaultImageResource" format="reference" />
+        <attr name="bananaPeelViewResource" format="reference" />
+        <attr name="bananaPeelContentViewLayoutResource" format="reference" />
+    </declare-styleable>
+</resources>
