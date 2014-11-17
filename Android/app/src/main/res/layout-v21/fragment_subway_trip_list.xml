@@ -4,6 +4,6 @@
     android:id="@+id/fragment_content_loading_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:bananaPeelDefaultImageResource="@drawable/ic_bananapeel_filled_default"
+    app:bananaPeelDefaultImageResource="@drawable/ic_bananapeel_default"
     app:bananaPeelDefaultMessageStringResource="@string/SubwayTripList.Empty.Error"
     app:bananaPeelContentViewLayoutResource="@layout/view_list_default" />
