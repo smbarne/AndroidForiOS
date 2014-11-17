@@ -119,11 +119,11 @@ public class TripListFragment extends Fragment implements LoadingBananaPeelView.
                 setTripList(data);
 
                 if (mViewHolder != null) {
-                    if (mRandom .nextInt() % 2 == 0) {
+//                    if (mRandom .nextInt() % 2 == 0) {
                         mViewHolder.loadingBananaPeelView.showContent();
-                    } else {
-                        mViewHolder.loadingBananaPeelView.showBananaPeel();
-                    }
+//                    } else {
+//                        mViewHolder.loadingBananaPeelView.showBananaPeel();
+//                    }
                 }
             }
 
