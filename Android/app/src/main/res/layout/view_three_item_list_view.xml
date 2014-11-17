@@ -45,5 +45,5 @@
         android:paddingRight="15dp"
         android:text="Right"
         android:textColor="@android:color/tertiary_text_light"/>
-®
+
 </RelativeLayout>
