@@ -13,6 +13,18 @@ public class TripListTableViewController: UITableViewController {
     public var subwayLineType:LineType?
     var data:[Trip]?
     
+    public override func viewWillAppear(animated: Bool) {
+        if let subwayLineType = self.subwayLineType {
+            self.configureNavBarForLineType(subwayLineType)
+        }
+        super.viewWillAppear(animated)
+    }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = self.subwayLineType?.rawValue
+    }
+    
     public func prepareForSubwayLine(subwayLineType:LineType) {
         self.subwayLineType = subwayLineType
         weak var weakSelf = self
@@ -49,5 +61,10 @@ public class TripListTableViewController: UITableViewController {
             return UITableViewCell.new()
         }
     }
+    
+    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
 }
 

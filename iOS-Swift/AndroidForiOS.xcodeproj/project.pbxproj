@@ -24,6 +24,7 @@
 		E12ACFBE1B66F37C0058B94D /* Blue.json in Resources */ = {isa = PBXBuildFile; fileRef = E12ACFBB1B66F37C0058B94D /* Blue.json */; };
 		E12ACFBF1B66F37C0058B94D /* Orange.json in Resources */ = {isa = PBXBuildFile; fileRef = E12ACFBC1B66F37C0058B94D /* Orange.json */; };
 		E12ACFC01B66F37C0058B94D /* Red.json in Resources */ = {isa = PBXBuildFile; fileRef = E12ACFBD1B66F37C0058B94D /* Red.json */; };
+		E12ACFFE1B67055A0058B94D /* UIViewControllerColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12ACFFD1B67055A0058B94D /* UIViewControllerColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E12ACFBB1B66F37C0058B94D /* Blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Blue.json; path = ../../Data/v2.0/Blue.json; sourceTree = "<group>"; };
 		E12ACFBC1B66F37C0058B94D /* Orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Orange.json; path = ../../Data/v2.0/Orange.json; sourceTree = "<group>"; };
 		E12ACFBD1B66F37C0058B94D /* Red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Red.json; path = ../../Data/v2.0/Red.json; sourceTree = "<group>"; };
+		E12ACFFD1B67055A0058B94D /* UIViewControllerColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerColors.swift; path = Extensions/UIViewControllerColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 		E12ACFB01B66D3C40058B94D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E12ACFFD1B67055A0058B94D /* UIViewControllerColors.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				9DA39DFF1B2E2D760093650D /* Prediction.swift in Sources */,
 				9DA39E011B2E3B080093650D /* DataManager.swift in Sources */,
 				E12ACFB71B66E4CA0058B94D /* SubwayTripTableViewCell.swift in Sources */,
+				E12ACFFE1B67055A0058B94D /* UIViewControllerColors.swift in Sources */,
 				E12ACFB91B66E7D80058B94D /* TripDetailTableViewController.swift in Sources */,
 				9DA39DF51B2E28D00093650D /* AppDelegate.swift in Sources */,
 				9DA39DF91B2E292C0093650D /* SubwayListViewController.swift in Sources */,

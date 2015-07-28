@@ -12,6 +12,8 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK - Properties and Static Values
     
+    @IBOutlet weak var tableView: UITableView!
+    
     static let aboutMessage = NSLocalizedString("This application demonstrates the correlation between iOS and Android development using Subway data provided by the MBTA.",
         comment: "Description for hello world message")
     
@@ -19,9 +21,13 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK - View Lifecycle
     
+    override func viewWillAppear(animated: Bool) {
+        self.clearColorStyles()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data = [LineType.Red, LineType.Blue, LineType.Orange] // TODO: figure out how to enumerate through the enum and set teha rray.
+        self.data = [LineType.Red, LineType.Blue, LineType.Orange] // TODO: figure out how to enumerate through the enum and set the array.
     }
     
     // MARK - UITableViewDataSource
@@ -40,23 +46,34 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell;
 	}
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     // MARK - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let tripVC = segue.destinationViewController as? TripListTableViewController {
-            tripVC.prepareForSubwayLine(LineType.Red) // TODO: index path for selection? 
+            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
+                tripVC.prepareForSubwayLine(self.data[selectedIndex]) // TODO: better way?
+            }
         }
     }
     
     // MARK - Actions
 
     @IBAction func didPressHelloWorldButton(sender: AnyObject) {
-        self.showViewController(
-            UIAlertController( title: NSLocalizedString("Hello World", comment: "Hello World Alert Title"),message:SubwayListViewController.aboutMessage, preferredStyle: UIAlertControllerStyle.Alert),             sender:nil)
+        self.presentViewController(
+            SubwayListViewController.aboutAlertControllerWithTitle(NSLocalizedString("Hello World", comment: "Hello World Alert Title")), animated: true, completion: nil)
     }
     
     @IBAction func didPressAboutButton(sender: AnyObject) {
-        self.showViewController(
-            UIAlertController( title: NSLocalizedString("About", comment: "About App Title"), message:SubwayListViewController.aboutMessage, preferredStyle: UIAlertControllerStyle.Alert),             sender:nil)
+        self.presentViewController(SubwayListViewController.aboutAlertControllerWithTitle(NSLocalizedString("About", comment: "About App Title")), animated: true, completion: nil)
+    }
+    
+    static func aboutAlertControllerWithTitle(title:String) -> UIAlertController {
+        let alertController = UIAlertController( title: title, message:SubwayListViewController.aboutMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK for dismissal"), style: UIAlertActionStyle.Cancel, handler: nil))
+        return alertController
     }
 }

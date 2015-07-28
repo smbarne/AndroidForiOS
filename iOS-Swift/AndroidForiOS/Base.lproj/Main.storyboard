@@ -12,9 +12,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="41l-x2-B6b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="wUp-Hs-ewY" kind="relationship" relationship="rootViewController" id="6Xf-ut-bgy"/>
@@ -37,15 +34,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="49j-Zx-Y0o">
-                                <rect key="frame" x="20" y="64" width="560" height="506"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubwayLineCell" id="JXu-cg-EYu">
-                                        <rect key="frame" x="0.0" y="65" width="560" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubwayLineCell" textLabel="Fc6-pE-mih" style="IBUITableViewCellStyleDefault" id="JXu-cg-EYu">
+                                        <rect key="frame" x="0.0" y="65" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JXu-cg-EYu" id="nOG-BB-XOg">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fc6-pE-mih">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="ldj-zL-g37" kind="show" id="CBI-gx-OgP"/>
@@ -68,22 +74,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PCy-vb-ErY" firstAttribute="top" secondItem="49j-Zx-Y0o" secondAttribute="bottom" id="G4t-RU-U3g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="49j-Zx-Y0o" secondAttribute="trailing" id="HMJ-Bz-DvD"/>
+                            <constraint firstAttribute="trailing" secondItem="49j-Zx-Y0o" secondAttribute="trailing" id="HMJ-Bz-DvD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PCy-vb-ErY" secondAttribute="trailing" id="IsW-y3-gPQ"/>
                             <constraint firstItem="PCy-vb-ErY" firstAttribute="leading" secondItem="LJK-U9-aM7" secondAttribute="leadingMargin" id="PRX-ZP-t17"/>
                             <constraint firstItem="PmM-Ky-Wmd" firstAttribute="top" secondItem="PCy-vb-ErY" secondAttribute="bottom" id="Szp-8c-6jE"/>
-                            <constraint firstItem="49j-Zx-Y0o" firstAttribute="leading" secondItem="LJK-U9-aM7" secondAttribute="leadingMargin" id="Xmx-Q1-z1P"/>
-                            <constraint firstItem="49j-Zx-Y0o" firstAttribute="top" secondItem="xVL-pf-7GH" secondAttribute="bottom" id="aeB-Ml-chF"/>
+                            <constraint firstItem="49j-Zx-Y0o" firstAttribute="leading" secondItem="LJK-U9-aM7" secondAttribute="leading" id="Xmx-Q1-z1P"/>
+                            <constraint firstItem="49j-Zx-Y0o" firstAttribute="top" secondItem="xVL-pf-7GH" secondAttribute="bottom" id="aeB-Ml-chF" userLabel="I"/>
+                            <constraint firstItem="49j-Zx-Y0o" firstAttribute="top" secondItem="xVL-pf-7GH" secondAttribute="bottom" id="gih-vp-sfl"/>
+                            <constraint firstItem="49j-Zx-Y0o" firstAttribute="top" secondItem="LJK-U9-aM7" secondAttribute="top" id="ypY-mT-dvB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aeB-Ml-chF"/>
+                                <exclude reference="gih-vp-sfl"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="hYn-XK-Glq">
+                    <navigationItem key="navigationItem" title="Subway Lines" id="hYn-XK-Glq">
                         <barButtonItem key="rightBarButtonItem" title="About" id="WRv-MA-hKU" userLabel="About Button">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="didPressAboutButton:" destination="wUp-Hs-ewY" id="m40-B2-BIb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="49j-Zx-Y0o" id="Xv0-Tr-dQ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pge-EY-zug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +141,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TrainName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAx-DC-JXh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TrainName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAx-DC-JXh">
                                                             <rect key="frame" x="501" y="0.0" width="83" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,6 +170,7 @@
                                     <outlet property="destinationLabel" destination="o2R-04-JgE" id="Fja-m3-qWR"/>
                                     <outlet property="timestampLabel" destination="Vjs-Bw-vHB" id="Wj3-n4-iuh"/>
                                     <outlet property="trainNameLabel" destination="CAx-DC-JXh" id="bpQ-Zt-ax2"/>
+                                    <segue destination="wka-bV-AyL" kind="show" id="YhV-50-zNZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -176,13 +193,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Ibi-e6-uYS">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nfb-yZ-RjS">
-                                <rect key="frame" x="0.0" y="162" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripPredictionTableViewCell" id="nfb-yZ-RjS">
+                                <rect key="frame" x="0.0" y="226" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nfb-yZ-RjS" id="asX-Nd-eWZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
