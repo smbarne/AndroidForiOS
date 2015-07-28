@@ -7,82 +7,32 @@
 //
 
 import Foundation
+import UIKit
 
-public enum LineType: Int {
+public enum LineType: String {
 	case Red, Blue, Orange
 
-	public init?(lineTypeValue:String) throws {
-		switch lineTypeValue {
-			case "Red":
-				self = .Red
-			case "Blue":
-				self = .Blue
-			case "Orange":
-				self = .Orange
-			default:
-				return nil;
-		}
-	}
-
-	public var name: String {
-		switch self {
-		case .Red:		return "Red"
-		case .Blue:     return "Blue"
-		case .Orange:   return "Orange"
-		}
-	}
-
 	public func filename() -> String {
-		return self.name + ".json"
+		return self.rawValue + ".json"
 	}
-
-	public func description() -> String {
-		return name
-	}
+    
+    public func color() -> UIColor {
+        switch (self) {
+        case .Red:
+            return UIColor.redColor()
+        case .Blue:
+            return UIColor.blueColor()
+        case .Orange:
+            return UIColor.orangeColor()
+        }
+    }
 }
 
-public class TripList: NSObject, NSCoding, NSCopying {
-	/**
-	String constants that are used to archive the stored properties of a `List`. These constants
-	are used to help implement `NSCoding`.
-	*/
-	private struct SerializationKeys {
-		static let time = "time"
-		static let line = "line"
-		static let trips = "trips"
-	}
+public struct TripList {
 
-	public var currentTime: NSDate
-
-	public var subwayLine: LineType
-
-	public var trips: [Trip]
-
-	// MARK: Initialization
-
-	public init(currentTime: NSDate, subwayLine: LineType, trips: [Trip]) {
-		self.currentTime = currentTime
-		self.subwayLine = subwayLine
-		self.trips = trips
-	}
-
-	public required init(coder aDecoder: NSCoder) {
-		currentTime = aDecoder.decodeObjectForKey(SerializationKeys.time) as! NSDate
-		subwayLine = aDecoder.decodeObjectForKey(SerializationKeys.line) as! LineType
-		trips = aDecoder.decodeObjectForKey(SerializationKeys.trips) as! [Trip]
-	}
-
-	// MARK: NSCopying
-
-	public func copyWithZone(zone: NSZone) -> AnyObject  {
-		return TripList(currentTime: self.currentTime, subwayLine: self.subwayLine, trips: self.trips)
-	}
-
-	public func encodeWithCoder(aCoder: NSCoder) {
-		aCoder.encodeObject(currentTime, forKey: SerializationKeys.time)
-		aCoder.encodeObject(subwayLine.rawValue, forKey: SerializationKeys.line)
-		aCoder.encodeObject(trips, forKey: SerializationKeys.trips)
-	}
+	public var currentTime:NSDate
+	public var subwayLine:LineType
+	public var trips:[Trip]
 
 	// MARK: Helper Methods
 
@@ -98,22 +48,32 @@ public class TripList: NSObject, NSCoding, NSCopying {
 
 		// Import Subway Line Type
 		if let subwayLineValue:String = data.objectForKey("Line") as? String {
-			do {
-				try subwayLine = LineType(lineTypeValue: subwayLineValue)!
-			} catch {
-				throw parseError("Subway line type not recognized")
-			}
+//			do {
+//				try subwayLine = LineType(rawValue: subwayLineValue)!
+//			} catch {
+//				throw parseError("Subway line type not recognized")
+//			}
+            subwayLine = LineType(rawValue: subwayLineValue)!
 		} else {
 			throw parseError("Subway line type data malformed")
 		}
 
 		// Import Trips List
-//		if let tripData:NSArray = data.objectForKey("Trips") as? [NSDictionary] {
-//
-//		} else {
-//			throw parseError("Subway line type data malformed")
-//		}
-		trips = [Trip.new()] // TODO
+		if let tripData:[NSDictionary] = data.objectForKey("Trips") as? [NSDictionary] {
+//            var importedTrips:
+//            for trip in tripData.enumerate() {
+//                
+//            }
+//            tripData.flatMap({ (NSDictionary) -> T? in
+//                return Trip.parse
+//            })
+            trips = tripData.map({ (data:NSDictionary) -> Trip in
+                return Trip.parseData(data)
+            })
+		} else {
+			throw parseError("Subway line type data malformed")
+		}
+
 
 		return TripList(currentTime: currentTime, subwayLine: subwayLine, trips: trips)
 	}

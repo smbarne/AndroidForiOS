@@ -13,12 +13,17 @@
 		9DA39DD41B2E278B0093650D /* AndroidForiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DD31B2E278B0093650D /* AndroidForiOSTests.swift */; };
 		9DA39DDF1B2E278B0093650D /* AndroidForiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DDE1B2E278B0093650D /* AndroidForiOSUITests.swift */; };
 		9DA39DF51B2E28D00093650D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DF41B2E28D00093650D /* AppDelegate.swift */; };
-		9DA39DF71B2E28DC0093650D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DF61B2E28DC0093650D /* ViewController.swift */; };
 		9DA39DF91B2E292C0093650D /* SubwayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DF81B2E292C0093650D /* SubwayListViewController.swift */; };
 		9DA39DFB1B2E2D580093650D /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DFA1B2E2D580093650D /* TripList.swift */; };
 		9DA39DFD1B2E2D640093650D /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DFC1B2E2D640093650D /* Trip.swift */; };
 		9DA39DFF1B2E2D760093650D /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39DFE1B2E2D760093650D /* Prediction.swift */; };
 		9DA39E011B2E3B080093650D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39E001B2E3B080093650D /* DataManager.swift */; };
+		E12ACFB51B66E24A0058B94D /* TripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12ACFB41B66E24A0058B94D /* TripListTableViewController.swift */; };
+		E12ACFB71B66E4CA0058B94D /* SubwayTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12ACFB61B66E4C90058B94D /* SubwayTripTableViewCell.swift */; };
+		E12ACFB91B66E7D80058B94D /* TripDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12ACFB81B66E7D80058B94D /* TripDetailTableViewController.swift */; };
+		E12ACFBE1B66F37C0058B94D /* Blue.json in Resources */ = {isa = PBXBuildFile; fileRef = E12ACFBB1B66F37C0058B94D /* Blue.json */; };
+		E12ACFBF1B66F37C0058B94D /* Orange.json in Resources */ = {isa = PBXBuildFile; fileRef = E12ACFBC1B66F37C0058B94D /* Orange.json */; };
+		E12ACFC01B66F37C0058B94D /* Red.json in Resources */ = {isa = PBXBuildFile; fileRef = E12ACFBD1B66F37C0058B94D /* Red.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +56,17 @@
 		9DA39DDE1B2E278B0093650D /* AndroidForiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidForiOSUITests.swift; sourceTree = "<group>"; };
 		9DA39DE01B2E278B0093650D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA39DF41B2E28D00093650D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
-		9DA39DF61B2E28DC0093650D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "View Controllers/ViewController.swift"; sourceTree = "<group>"; };
 		9DA39DF81B2E292C0093650D /* SubwayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubwayListViewController.swift; path = "View Controllers/SubwayListViewController.swift"; sourceTree = "<group>"; };
 		9DA39DFA1B2E2D580093650D /* TripList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripList.swift; path = Data/TripList.swift; sourceTree = "<group>"; };
 		9DA39DFC1B2E2D640093650D /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trip.swift; path = Data/Trip.swift; sourceTree = "<group>"; };
 		9DA39DFE1B2E2D760093650D /* Prediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prediction.swift; path = Data/Prediction.swift; sourceTree = "<group>"; };
 		9DA39E001B2E3B080093650D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Data/DataManager.swift; sourceTree = "<group>"; };
+		E12ACFB41B66E24A0058B94D /* TripListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripListTableViewController.swift; path = "View Controllers/TripListTableViewController.swift"; sourceTree = "<group>"; };
+		E12ACFB61B66E4C90058B94D /* SubwayTripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubwayTripTableViewCell.swift; path = Cells/SubwayTripTableViewCell.swift; sourceTree = "<group>"; };
+		E12ACFB81B66E7D80058B94D /* TripDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripDetailTableViewController.swift; path = "View Controllers/TripDetailTableViewController.swift"; sourceTree = "<group>"; };
+		E12ACFBB1B66F37C0058B94D /* Blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Blue.json; path = ../../Data/v2.0/Blue.json; sourceTree = "<group>"; };
+		E12ACFBC1B66F37C0058B94D /* Orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Orange.json; path = ../../Data/v2.0/Orange.json; sourceTree = "<group>"; };
+		E12ACFBD1B66F37C0058B94D /* Red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Red.json; path = ../../Data/v2.0/Red.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				9DA39DED1B2E279D0093650D /* Application */,
+				E12ACFB11B66D4150058B94D /* Cells */,
 				9DA39DEC1B2E27950093650D /* Data */,
+				E12ACFB01B66D3C40058B94D /* Extensions */,
 				9DA39DEF1B2E27BE0093650D /* View Controllers */,
 				9DA39DF01B2E27CE0093650D /* Views */,
 				9DA39DEE1B2E27AC0093650D /* Resources */,
@@ -157,6 +169,7 @@
 		9DA39DEE1B2E27AC0093650D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E12ACFBA1B66F3640058B94D /* JSON */,
 				9DA39DC51B2E278B0093650D /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -165,8 +178,9 @@
 		9DA39DEF1B2E27BE0093650D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9DA39DF61B2E28DC0093650D /* ViewController.swift */,
 				9DA39DF81B2E292C0093650D /* SubwayListViewController.swift */,
+				E12ACFB41B66E24A0058B94D /* TripListTableViewController.swift */,
+				E12ACFB81B66E7D80058B94D /* TripDetailTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -202,6 +216,31 @@
 				9DA39DFE1B2E2D760093650D /* Prediction.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E12ACFB01B66D3C40058B94D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E12ACFB11B66D4150058B94D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E12ACFB61B66E4C90058B94D /* SubwayTripTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		E12ACFBA1B66F3640058B94D /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E12ACFBB1B66F37C0058B94D /* Blue.json */,
+				E12ACFBC1B66F37C0058B94D /* Orange.json */,
+				E12ACFBD1B66F37C0058B94D /* Red.json */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA39DC91B2E278B0093650D /* LaunchScreen.storyboard in Resources */,
+				E12ACFBE1B66F37C0058B94D /* Blue.json in Resources */,
 				9DA39DC61B2E278B0093650D /* Assets.xcassets in Resources */,
+				E12ACFC01B66F37C0058B94D /* Red.json in Resources */,
 				9DA39DC41B2E278B0093650D /* Main.storyboard in Resources */,
+				E12ACFBF1B66F37C0058B94D /* Orange.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +378,11 @@
 			files = (
 				9DA39DFD1B2E2D640093650D /* Trip.swift in Sources */,
 				9DA39DFB1B2E2D580093650D /* TripList.swift in Sources */,
+				E12ACFB51B66E24A0058B94D /* TripListTableViewController.swift in Sources */,
 				9DA39DFF1B2E2D760093650D /* Prediction.swift in Sources */,
 				9DA39E011B2E3B080093650D /* DataManager.swift in Sources */,
-				9DA39DF71B2E28DC0093650D /* ViewController.swift in Sources */,
+				E12ACFB71B66E4CA0058B94D /* SubwayTripTableViewCell.swift in Sources */,
+				E12ACFB91B66E7D80058B94D /* TripDetailTableViewController.swift in Sources */,
 				9DA39DF51B2E28D00093650D /* AppDelegate.swift in Sources */,
 				9DA39DF91B2E292C0093650D /* SubwayListViewController.swift in Sources */,
 			);

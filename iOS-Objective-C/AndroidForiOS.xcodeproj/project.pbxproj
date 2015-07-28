@@ -32,7 +32,6 @@
 		83A4C15B18DCA9F700DD378B /* MBTADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15A18DCA9F700DD378B /* MBTADataManager.m */; };
 		83A4C15F18DCB37600DD378B /* NSString+lineType.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C15E18DCB37600DD378B /* NSString+lineType.m */; };
 		83A4C16218DCB38C00DD378B /* UIColor+MBTAColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */; };
-		83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */; };
 		83A4C16818DF571200DD378B /* MBTASubwayTripTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */; };
 		83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4C16A18DF57DD00DD378B /* MBTATripListTableViewController.m */; };
 		9D82D6F21A0DA70900DE8364 /* UIViewController+MBTAColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D82D6F11A0DA70900DE8364 /* UIViewController+MBTAColors.m */; };
@@ -91,8 +90,6 @@
 		83A4C15E18DCB37600DD378B /* NSString+lineType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+lineType.m"; path = "Utilities/NSString+lineType.m"; sourceTree = "<group>"; };
 		83A4C16018DCB38C00DD378B /* UIColor+MBTAColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MBTAColors.h"; path = "Utilities/UIColor+MBTAColors.h"; sourceTree = "<group>"; };
 		83A4C16118DCB38C00DD378B /* UIColor+MBTAColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MBTAColors.m"; path = "Utilities/UIColor+MBTAColors.m"; sourceTree = "<group>"; };
-		83A4C16318DCB5FA00DD378B /* UIImage+QuickImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+QuickImage.h"; path = "Utilities/UIImage+QuickImage.h"; sourceTree = "<group>"; };
-		83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+QuickImage.m"; path = "Utilities/UIImage+QuickImage.m"; sourceTree = "<group>"; };
 		83A4C16618DF571200DD378B /* MBTASubwayTripTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTASubwayTripTableTableViewController.h; path = "View Controllers/MBTASubwayTripTableTableViewController.h"; sourceTree = "<group>"; };
 		83A4C16718DF571200DD378B /* MBTASubwayTripTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBTASubwayTripTableTableViewController.m; path = "View Controllers/MBTASubwayTripTableTableViewController.m"; sourceTree = "<group>"; };
 		83A4C16918DF57DD00DD378B /* MBTATripListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTATripListTableViewController.h; path = "View Controllers/MBTATripListTableViewController.h"; sourceTree = "<group>"; };
@@ -332,8 +329,6 @@
 		83A4C15C18DCB33C00DD378B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				83A4C16318DCB5FA00DD378B /* UIImage+QuickImage.h */,
-				83A4C16418DCB5FA00DD378B /* UIImage+QuickImage.m */,
 				83A4C15D18DCB37600DD378B /* NSString+lineType.h */,
 				83A4C15E18DCB37600DD378B /* NSString+lineType.m */,
 				83A4C16018DCB38C00DD378B /* UIColor+MBTAColors.h */,
@@ -458,7 +453,6 @@
 				83A4C16B18DF57DD00DD378B /* MBTATripListTableViewController.m in Sources */,
 				8330B59A18DF5D50005E56AF /* MBTAPredictionCell.m in Sources */,
 				83A4C15F18DCB37600DD378B /* NSString+lineType.m in Sources */,
-				83A4C16518DCB5FA00DD378B /* UIImage+QuickImage.m in Sources */,
 				8330B5A218DF654D005E56AF /* MBTATripHeaderView.m in Sources */,
 				83A4C13318DC8AD800DD378B /* MBTAAppDelegate.m in Sources */,
 				83A4C15818DCA9C500DD378B /* MBTAPrediction.m in Sources */,

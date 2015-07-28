@@ -25,7 +25,7 @@ public class DataManager: NSObject {
 
 	private static var _backgroundQueue:dispatch_queue_t {
 		get {
-			return dispatch_queue_create("Hello World", DISPATCH_QUEUE_SERIAL)
+			return dispatch_queue_create("SubwayLineBackgroundQueue", DISPATCH_QUEUE_SERIAL)
 		}
 	}
 
@@ -33,10 +33,10 @@ public class DataManager: NSObject {
 
 	public func importData(key:LineType, completion: ((tripList :TripList?, succeeded :Bool, error :NSError?) -> ())? ) {
 		dispatch_async(DataManager._backgroundQueue) { () -> Void in
-			let data = try! self.parseJSONToDictionary(key.filename())
-
 			do {
-				let tripList = try TripList.parseData(data)
+                let data = try self.parseJSONToDictionary(key.filename())
+                let tripListData = data.objectForKey("TripList") as? NSDictionary
+				let tripList = try TripList.parseData(tripListData!) // TODO: !
 
 				if let completion = completion {
 					dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -54,11 +54,13 @@ public class DataManager: NSObject {
 	}
 
 	private func parseJSONToDictionary(fileName: String) throws -> NSDictionary {
-
-		guard let filePath:String = NSBundle.mainBundle().pathForResource(fileName, ofType: fileName.pathExtension) else {
-			// TODO: Throw error
-			throw NSError.new()
+		guard let filePath:String = NSBundle.mainBundle().pathForResource(fileName.stringByDeletingPathExtension, ofType: fileName.pathExtension) else {
+            throw NSError(domain: NSCocoaErrorDomain, code: NSFileReadCorruptFileError, userInfo: [
+                    NSLocalizedDescriptionKey: NSLocalizedString("Could not find data file.", comment: "Read error description"),
+                    NSLocalizedFailureReasonErrorKey: NSLocalizedString("TODO", comment: "Read failure reason")
+                    ])
 		}
+        
 		let jsonData = NSData.dataWithContentsOfMappedFile(filePath) as! NSData
 		let jsonDict = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
 

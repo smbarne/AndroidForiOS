@@ -8,4 +8,8 @@
 
 import Foundation
 
-
+public struct Prediction {
+    public var stopId:String
+    public var stopName:String
+    public var stopSeconds:NSInteger
+}
