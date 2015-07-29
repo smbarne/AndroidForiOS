@@ -60,40 +60,10 @@ public class DataManager: NSObject {
                     NSLocalizedFailureReasonErrorKey: NSLocalizedString("TODO", comment: "Read failure reason")
                     ])
 		}
-        
-		let jsonData = NSData.dataWithContentsOfMappedFile(filePath) as! NSData
+
+		let jsonData = try NSData(contentsOfURL: NSURL(fileURLWithPath: filePath), options: NSDataReadingOptions.DataReadingMapped)
 		let jsonDict = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
 
 		return jsonDict;
 	}
-
-//	// From http://stackoverflow.com/questions/10866403/passing-data-from-local-file-using-json
-//	+(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation
-//	{
-//	NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
-//	NSData* data = [NSData dataWithContentsOfFile:filePath];
-//	__autoreleasing NSError* error = nil;
-//	id result = [NSJSONSerialization JSONObjectWithData:data
-//	options:kNilOptions error:&error];
-//	if (error != nil) {
-//	return nil;
-//	}
-//	else {
-//	return result;
-//	}
-//	}
-
-
-//	func processFile(filename: String) throws {
-//		if exists(filename) {
-//			let file = open(filename)
-//			defer {
-//				close(file)
-//			}
-//			while let line = try file.readline() {
-//				/* Work with the file. */
-//			}
-//			// close(file) is called here, at the end of the scope.
-//		}
-//	}
 }
