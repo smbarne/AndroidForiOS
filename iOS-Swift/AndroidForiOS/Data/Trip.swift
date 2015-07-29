@@ -16,7 +16,7 @@ public struct Trip {
     public var positionLat:Double = 0.0
     public var positionLong:Double = 0.0
     public var positionHeading:NSInteger = 0
-    public var predictions:NSArray?
+    public var predictions:[Prediction]?
     
     // TODO: Protocol for parsing data
     // TODO: thowing errors in a map?
@@ -38,7 +38,11 @@ public struct Trip {
         importedTrip.destination = destination
         
         // Import Prediction List
-        // TODO: array of predictions
+        if let predictionData = data.objectForKey("Predictions") as? [NSDictionary] {
+            importedTrip.predictions = predictionData.map({ (data:NSDictionary) -> Prediction in
+                return Prediction.parseData(data)
+            })
+        }
         
         // Import position information if it exits
         if let positionData = data.objectForKey("Position") as? NSDictionary {

@@ -17,7 +17,7 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     static let aboutMessage = NSLocalizedString("This application demonstrates the correlation between iOS and Android development using Subway data provided by the MBTA.",
         comment: "Description for hello world message")
     
-    var data:[LineType] = [];
+    var data:[LineType]?
     
     // MARK - View Lifecycle
     
@@ -33,15 +33,20 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK - UITableViewDataSource
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.data.count
+        guard let dataCount = self.data?.count else {
+            return 0
+        }
+        return dataCount
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("SubwayLineCell", forIndexPath: indexPath)
 
-        var subwayLineType = self.data[indexPath.row]
-        cell.textLabel?.text = subwayLineType.rawValue
-        cell.textLabel?.textColor = subwayLineType.color()
+        if let data = self.data {
+            var subwayLineType = data[indexPath.row]
+            cell.textLabel?.text = subwayLineType.rawValue
+            cell.textLabel?.textColor = subwayLineType.color()            
+        }
         
         return cell;
 	}
@@ -55,7 +60,9 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let tripVC = segue.destinationViewController as? TripListTableViewController {
             if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
-                tripVC.prepareForSubwayLine(self.data[selectedIndex]) // TODO: better way?
+                if let data = self.data { // TODO: combo if/let?
+                    tripVC.prepareForSubwayLine(data[selectedIndex]) // TODO: better way?
+                }
             }
         }
     }

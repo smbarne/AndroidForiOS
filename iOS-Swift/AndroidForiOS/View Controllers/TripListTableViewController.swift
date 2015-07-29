@@ -43,6 +43,16 @@ public class TripListTableViewController: UITableViewController {
         }
     }
     
+    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let tripDetailVC = segue.destinationViewController as? TripDetailViewController {
+            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
+                if let data = self.data {
+                    tripDetailVC.prepareWithTrip(data[selectedIndex])
+                }
+            }
+        }
+    }
+    
     public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let dataCount = self.data?.count else {
             return 0
