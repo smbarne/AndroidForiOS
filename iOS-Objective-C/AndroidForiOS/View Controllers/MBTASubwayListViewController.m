@@ -20,7 +20,6 @@
 // Utilities
 #import "NSString+lineType.h"
 #import "UIColor+MBTAColors.h"
-#import "UIImage+QuickImage.h"
 #import "UIViewController+MBTAColors.h"
 
 static NSString* const kMBTASubwayListViewControllerTitle = @"Subway Lines";
