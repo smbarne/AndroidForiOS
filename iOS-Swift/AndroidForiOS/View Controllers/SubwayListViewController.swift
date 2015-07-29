@@ -27,7 +27,7 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.data = [LineType.Red, LineType.Blue, LineType.Orange] // TODO: figure out how to enumerate through the enum and set the array.
+        self.data = [LineType.Red, LineType.Blue, LineType.Orange]
     }
     
     // MARK - UITableViewDataSource
@@ -59,10 +59,8 @@ class SubwayListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let tripVC = segue.destinationViewController as? TripListTableViewController {
-            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
-                if let data = self.data { // TODO: combo if/let?
-                    tripVC.prepareForSubwayLine(data[selectedIndex]) // TODO: better way?
-                }
+            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row, data = self.data {
+				tripVC.prepareForSubwayLine(data[selectedIndex])
             }
         }
     }

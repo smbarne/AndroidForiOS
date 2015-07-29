@@ -19,21 +19,21 @@ public struct Trip {
     public var predictions:[Prediction]?
     
     // TODO: Protocol for parsing data
-    // TODO: thowing errors in a map?
+    // TODO: thowing errors in a map
     
     public static func parseData(data: NSDictionary) -> Trip {
         var importedTrip:Trip = Trip()
 
         // Import TripId
         guard let tripId = data.objectForKey("TripID") as? String else {
-            return importedTrip  // TODO: throw
-//                throw parseError("Invalid TripId")
+            return importedTrip
+//          throw parseError("Invalid TripId")
         }
         importedTrip.tripId = tripId
         
         guard let destination = data.objectForKey("Destination") as? String else {
             return importedTrip  // TODO: throw
-//                throw parseError("invalid destination data")
+//          throw parseError("invalid destination data")
         }
         importedTrip.destination = destination
         

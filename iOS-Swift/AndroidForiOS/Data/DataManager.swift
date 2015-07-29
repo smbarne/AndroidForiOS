@@ -57,7 +57,7 @@ public class DataManager: NSObject {
 		guard let filePath:String = NSBundle.mainBundle().pathForResource(fileName.stringByDeletingPathExtension, ofType: fileName.pathExtension) else {
             throw NSError(domain: NSCocoaErrorDomain, code: NSFileReadCorruptFileError, userInfo: [
                     NSLocalizedDescriptionKey: NSLocalizedString("Could not find data file.", comment: "Read error description"),
-                    NSLocalizedFailureReasonErrorKey: NSLocalizedString("TODO", comment: "Read failure reason")
+                    NSLocalizedFailureReasonErrorKey: NSLocalizedString("Corrupt or Mising File", comment: "Read failure reason")
                     ])
 		}
 
