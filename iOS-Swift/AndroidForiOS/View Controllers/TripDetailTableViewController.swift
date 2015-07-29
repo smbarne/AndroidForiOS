@@ -34,8 +34,6 @@ public class TripDetailViewController : UITableViewController {
         }
         return dataCount
     }
-
-	// MARK - UITableViewDelegate
     
     public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("TripPredictionTableViewCell", forIndexPath: indexPath)
@@ -47,6 +45,8 @@ public class TripDetailViewController : UITableViewController {
         
         return cell;
     }
+
+	// MARK - UITableViewDelegate
 
 	public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)

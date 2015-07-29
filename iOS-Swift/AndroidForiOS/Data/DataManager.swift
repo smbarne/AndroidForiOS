@@ -29,14 +29,21 @@ public class DataManager: NSObject {
 		}
 	}
 
+	private static let importError:NSError = NSError(domain: NSCocoaErrorDomain, code: NSFileReadCorruptFileError, userInfo: [
+			NSLocalizedDescriptionKey: NSLocalizedString("Could not read data.", comment: "Import error description"),
+			NSLocalizedFailureReasonErrorKey: NSLocalizedString("Unknown import error", comment: "Import failure reason")
+			])
+
 	// MARK - Data Import
 
 	public func importData(key:LineType, completion: ((tripList :TripList?, succeeded :Bool, error :NSError?) -> ())? ) {
 		dispatch_async(DataManager._backgroundQueue) { () -> Void in
 			do {
                 let data = try self.parseJSONToDictionary(key.filename())
-                let tripListData = data.objectForKey("TripList") as? NSDictionary
-				let tripList = try TripList.parseData(tripListData!) // TODO: !
+				guard let tripListData = data.objectForKey("TripList") as? NSDictionary else {
+					throw DataManager.importError
+				}
+				let tripList = try TripList.parseData(tripListData)
 
 				if let completion = completion {
 					dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -46,7 +53,7 @@ public class DataManager: NSObject {
 			} catch {
 				if let completion = completion {
 					dispatch_async(dispatch_get_main_queue(), { () -> Void in
-						completion(tripList: nil, succeeded: false, error: nil) // TODO: error
+						completion(tripList: nil, succeeded: false, error: DataManager.importError)
 					})
 				}
 			}
