@@ -118,11 +118,11 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2r6-Wg-184" id="kKC-bY-JSJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZfU-Tc-0MY">
-                                            <rect key="frame" x="18" y="16" width="574" height="52.5"/>
+                                            <rect key="frame" x="18" y="16" width="574" height="53"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AjN-aY-oHl">
                                                     <rect key="frame" x="0.0" y="0.0" width="574" height="20.5"/>
@@ -150,7 +150,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timestamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjs-Bw-vHB">
-                                                    <rect key="frame" x="0.0" y="26.5" width="574" height="26"/>
+                                                    <rect key="frame" x="0.0" y="26.5" width="574" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
