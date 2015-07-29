@@ -10,16 +10,23 @@ import UIKit
 
 public class TripDetailViewController : UITableViewController {
     
+	@IBOutlet weak var tripDetailHeaderView: TripDetailHeaderView!
     var trip:Trip?
     
     public func prepareWithTrip(trip:Trip) {
         self.trip = trip
     }
+
+	// MARK - View Lifecycle
     
     public override func viewDidLoad() {
         self.title = trip?.destination
-        // TODO: setup header view
+		if let trip = self.trip {
+			self.tripDetailHeaderView.updateHeader(trip)
+		}
     }
+
+	// MARK - UITableViewDataSource
     
     public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let dataCount = self.trip?.predictions?.count else {
@@ -27,6 +34,8 @@ public class TripDetailViewController : UITableViewController {
         }
         return dataCount
     }
+
+	// MARK - UITableViewDelegate
     
     public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("TripPredictionTableViewCell", forIndexPath: indexPath)
@@ -38,4 +47,8 @@ public class TripDetailViewController : UITableViewController {
         
         return cell;
     }
+
+	public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	}
 }

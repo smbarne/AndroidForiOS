@@ -23,6 +23,8 @@ public class TripListTableViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.subwayLineType?.rawValue
+		self.tableView.estimatedRowHeight = 65.0
+		self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     public func prepareForSubwayLine(subwayLineType:LineType) {
