@@ -3,7 +3,7 @@ package com.example.androidforios.app.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.androidforios.app.R;
@@ -16,7 +16,7 @@ import com.example.androidforios.app.fragments.TripDetailFragment;
  *
  * Created by Stephen Barnes on 3/23/14.
  */
-public class TripDetailActivity extends ActionBarActivity {
+public class TripDetailActivity extends AppCompatActivity {
 
     /**
      * Create an Intent to launch a {@link TripDetailActivity} from a unique subway trip.

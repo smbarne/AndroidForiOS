@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.androidforios.app.R;
@@ -19,7 +19,7 @@ import com.example.androidforios.app.fragments.TripListFragment.TripListFragment
  *
  * Created by Stephen Barnes on 3/23/14.
  */
-public class TripListActivity extends ActionBarActivity implements TripListFragmentInteractionListener {
+public class TripListActivity extends AppCompatActivity implements TripListFragmentInteractionListener {
 
     /**
      * Create an {@link Intent} to launch a new {@link TripListActivity} for a particular subway line.
