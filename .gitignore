@@ -36,5 +36,7 @@ proguard/
 iOS/AndroidForiOS.xcodeproj/xcuserdata
 iOS/AndroidForiOS.xcodeproj/project.xcworkspace/xcuserdata
 Android/build
-iOS-Objective-C/AndroidForiOS.xcodeproj/project.xcworkspace/xcshareddata/AndroidForiOS.xccheckout
-iOS-Swift/AndroidForiOS.xcodeproj/xcuserdata/smbarne.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+iOS-Swift/AndroidForiOS.xcodeproj/project.xcworkspace/xcuserdata
+iOS-Swift/AndroidForiOS.xcodeproj/xcuserdata
+iOS-Objective-C/AndroidForiOS.xcodeproj/project.xcworkspace/xcuserdata
+iOS-Objective-C/AndroidForiOS.xcodeproj/xcuserdata
