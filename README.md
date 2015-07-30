@@ -1,6 +1,9 @@
 AndroidForiOS
 =============
 
+# Note
+Swift project uses Swift 2.0 and requires Xcode 7 beta 4 or higher.
+
 A small, sample project illustrating some of the same concepts implemented on both platforms.  
 
 Sample data from the [MBTA](http://www.mbta.com/rider_tools/developers/default.asp?id=21898) is used to present trip times and prediction times for the red, blue, and orange subway lines.
